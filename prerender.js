@@ -26,7 +26,7 @@ const routes = [
   },
   {
     path: 'portfolio',
-    title: 'Client Work & Portfolio | Marketing Insight Pro',
+    title: 'Portfolio | Marketing Insight Pro — Meta Ads & SEO Agency Pakistan',
     desc: 'Explore real-world case studies across Meta Ads, SEO audits, video editing, social media management, and strategic copywriting campaigns.',
     canonical: 'https://marketinginsightpro.vercel.app/portfolio'
   },
