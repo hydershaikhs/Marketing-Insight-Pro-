@@ -11,7 +11,6 @@ import {
   TrendingUp, 
   Users, 
   Award, 
-  MessageCircle,
   CheckCircle2
 } from 'lucide-react';
 import './Portfolio.css';
@@ -220,20 +219,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* MOBILE STICKY CTA BAR */}
-      <div className="mobile-sticky-cta-bar">
-        <div className="sticky-cta-content">
-          <span className="sticky-cta-text">Get Free Audit</span>
-          <a 
-            href="https://wa.me/923266739989" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="sticky-whatsapp-btn"
-          >
-            <MessageCircle size={16} /> WhatsApp Now
-          </a>
-        </div>
-      </div>
+
 
       {/* CASE STUDY DETAILS MODAL */}
       {selectedStudy && (
