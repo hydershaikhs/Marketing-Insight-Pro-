@@ -26,7 +26,8 @@ import {
   MessageCircle,
   Briefcase,
   Layers,
-  ArrowUpRight
+  ArrowUpRight,
+  ShieldCheck as ShieldIcon
 } from 'lucide-react';
 import './Home.css';
 
@@ -37,13 +38,15 @@ const stats = [
   { value: 4, suffix: '.9/5', label: 'Client Feedback Rating' },
 ];
 
-const brands = [
-  'Aura Silk E-commerce',
-  'PEPVIAL',
-  'PlanetCert',
-  'Nationwide Medical',
-  'DevForge',
-  'SaaSify'
+const trustHighlights = [
+  { name: 'Aura Silk E-Commerce', proof: '₨ 30L+ Revenue Scaled' },
+  { name: 'PEPVIAL Global', proof: '+150% Organic Growth' },
+  { name: 'PlanetCert Brand', proof: '240K+ Viral Video Views' },
+  { name: 'Nationwide Medical', proof: '4.8x Meta Ads ROAS' },
+  { name: 'DevForge Tech', proof: '100% Account Transparency' },
+  { name: 'SaaSify Platforms', proof: 'High-Converting Copy' },
+  { name: 'Verified Meta Partner Strategy', proof: 'Sales-Focused Funnels' },
+  { name: 'Direct WhatsApp Support', proof: '< 24h Response SLA' }
 ];
 
 const pillars = [
@@ -207,15 +210,16 @@ export default function Home() {
             <div className="stats-running-laser-line"></div>
           </div>
 
-          {/* CLIENT BRANDS TICKER STRIP WITH INFINITE MARQUEE */}
+          {/* HIGH-TRUST CLIENT ACHIEVEMENTS TICKER STRIP WITH SEAMLESS INFINITE MARQUEE (RIGHT TO LEFT) */}
           <div className="hero-brands-ticker">
-            <span className="brands-ticker-label">TRUSTED BY AMBITIOUS BRANDS:</span>
+            <span className="brands-ticker-label">VALIDATED RESULTS & TRUST:</span>
             <div className="brands-marquee-wrapper">
               <div className="brands-marquee-track">
-                {[...brands, ...brands].map((b, i) => (
-                  <div key={i} className="brand-ticker-item">
-                    <Sparkles size={12} className="gold-icon" />
-                    <span>{b}</span>
+                {[...trustHighlights, ...trustHighlights].map((item, i) => (
+                  <div key={i} className="trust-ticker-pill">
+                    <Sparkles size={13} className="gold-icon" />
+                    <strong className="ticker-brand-name">{item.name}</strong>
+                    <span className="ticker-metric-badge">{item.proof}</span>
                   </div>
                 ))}
               </div>

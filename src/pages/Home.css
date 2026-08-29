@@ -374,23 +374,24 @@
 }
 
 /* ==========================================================================
-   BRANDS TICKER STRIP WITH INFINITE MARQUEE
+   BRANDS TICKER STRIP WITH INFINITE MARQUEE (RIGHT TO LEFT)
    ========================================================================== */
 .hero-brands-ticker {
   background: rgba(2, 29, 77, 0.03);
-  border: 1px solid rgba(2, 29, 77, 0.06);
-  border-radius: 14px;
-  padding: 16px 24px;
+  border: 1.5px solid rgba(189, 137, 44, 0.2);
+  border-radius: 16px;
+  padding: 14px 22px;
   display: flex;
   align-items: center;
   gap: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(2, 29, 77, 0.04);
 }
 
 .brands-ticker-label {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--gold-deep);
   text-transform: uppercase;
   white-space: nowrap;
@@ -401,40 +402,65 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
 .brands-marquee-track {
   display: flex;
-  gap: 36px;
+  flex-wrap: nowrap;
+  gap: 24px;
   width: max-content;
-  animation: marqueeScroll 25s linear infinite;
+  will-change: transform;
+  animation: marqueeRightToLeft 28s linear infinite;
 }
 
 .brands-marquee-track:hover {
   animation-play-state: paused;
 }
 
-@keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.brand-ticker-item {
-  display: flex;
+.trust-ticker-pill {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--navy-deep);
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(189, 137, 44, 0.3);
+  padding: 7px 16px;
+  border-radius: 30px;
+  box-shadow: 0 3px 12px rgba(2, 29, 77, 0.05);
   white-space: nowrap;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.brand-ticker-item:hover {
-  color: var(--gold-primary);
-  transform: scale(1.05);
+.trust-ticker-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 20px rgba(189, 137, 44, 0.25);
+}
+
+.ticker-brand-name {
+  font-size: 13px;
+  color: var(--navy-deep);
+  font-weight: 700;
+}
+
+.ticker-metric-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #000;
+  background: var(--gold-gradient);
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
 }
 
 /* ==========================================================================
