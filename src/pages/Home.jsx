@@ -21,7 +21,12 @@ import {
   Sparkles,
   BarChart3,
   Users,
-  Clock
+  Clock,
+  Check,
+  MessageCircle,
+  Briefcase,
+  Layers,
+  ArrowUpRight
 } from 'lucide-react';
 import './Home.css';
 
@@ -30,6 +35,38 @@ const stats = [
   { value: 100, suffix: '%', label: 'Account Ownership & Transparency' },
   { value: 24, suffix: 'h', label: 'Response Time SLA' },
   { value: 4, suffix: '.9/5', label: 'Client Feedback Rating' },
+];
+
+const brands = [
+  'Aura Silk E-commerce',
+  'PEPVIAL',
+  'PlanetCert',
+  'Nationwide Medical',
+  'DevForge',
+  'SaaSify'
+];
+
+const pillars = [
+  {
+    icon: ShieldCheck,
+    title: '100% Account Transparency',
+    desc: 'You retain full administrative ownership of your Meta Ad accounts, pixels, and data. Zero gatekeeping.'
+  },
+  {
+    icon: Target,
+    title: 'Revenue & Sales First',
+    desc: 'Every campaign and asset is engineered strictly for customer acquisition, ROAS, and bottom-line profit.'
+  },
+  {
+    icon: Zap,
+    title: 'Senior Growth Engineers',
+    desc: 'Your campaigns are managed directly by experienced specialists with proven track records scaling brands.'
+  },
+  {
+    icon: Clock,
+    title: 'Rapid 24-Hour SLA',
+    desc: 'Fast communication, direct WhatsApp access, and weekly performance reviews to keep you ahead of competitors.'
+  }
 ];
 
 const processSteps = [
@@ -98,20 +135,31 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title">
-                Professional <span className="gold-gradient-text">Digital Marketer</span> Specializing in Meta Ads & Creative Growth
+                Scale Your Revenue With <span className="gold-gradient-text">Precision Meta Ads</span> & Organic Growth
               </h1>
 
               <p className="hero-sub">
-                From structured Meta Ads campaigns and technical SEO audits to short-form video editing, social media designs, and content writing — everything you need to grow your brand online.
+                From sales-focused Meta Ads campaigns and technical SEO audits to viral short-form video editing, visual branding, and strategic copywriting — engineered for ambitious businesses.
               </p>
 
               <div className="hero-actions">
                 <button className="btn btn-gold btn-glow" onClick={() => setModalOpen(true)}>
                   <Calendar size={18} /> Book Strategy Session <ArrowRight size={18} />
                 </button>
-                <Link to="/portfolio" className="btn btn-outline-gold">
-                  Explore Case Studies
-                </Link>
+                <a 
+                  href="https://wa.me/923266739989" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="btn btn-outline-gold"
+                >
+                  <MessageCircle size={18} /> Chat on WhatsApp
+                </a>
+              </div>
+
+              <div className="hero-trust-pills">
+                <span className="trust-pill"><Check size={14} className="gold-icon" /> 100% Data-Driven</span>
+                <span className="trust-pill"><Check size={14} className="gold-icon" /> Full Account Transparency</span>
+                <span className="trust-pill"><Check size={14} className="gold-icon" /> Rapid 24h SLA</span>
               </div>
             </Reveal>
 
@@ -122,15 +170,15 @@ export default function Home() {
                   <TrendingUp size={16} className="gold-icon" />
                   <div>
                     <strong>Sales Focus</strong>
-                    <span>Campaign Setup</span>
+                    <span>High ROAS Setup</span>
                   </div>
                 </div>
 
                 <div className="floating-badge badge-reach">
                   <Users size={16} className="gold-icon" />
                   <div>
-                    <strong>Targeted Ads</strong>
-                    <span>SEO Audits</span>
+                    <strong>50+ Brands</strong>
+                    <span>Scaled Nationally</span>
                   </div>
                 </div>
 
@@ -156,6 +204,49 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* CLIENT BRANDS TICKER STRIP */}
+          <div className="hero-brands-ticker">
+            <span className="brands-ticker-label">TRUSTED BY AMBITIOUS BRANDS & BUSINESSES:</span>
+            <div className="brands-ticker-list">
+              {brands.map((b, i) => (
+                <div key={i} className="brand-ticker-item">
+                  <Sparkles size={12} className="gold-icon" />
+                  <span>{b}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US / AGENCY PILLARS */}
+      <section className="section section-dark agency-pillars-section">
+        <div className="container">
+          <div className="section-head text-center">
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>
+              Why Brands Choose Us
+            </span>
+            <h2>Built For <span className="gold-gradient-text">High-Growth Scalability</span></h2>
+            <p>We eliminate guesswork with transparent processes, senior-level campaign engineering, and a focus on bottom-line profit.</p>
+          </div>
+
+          <div className="pillars-grid">
+            {pillars.map((item, idx) => {
+              const PillarIcon = item.icon;
+              return (
+                <Reveal key={idx} delay={idx * 80}>
+                  <div className="pillar-card glass-card">
+                    <div className="pillar-icon-box">
+                      <PillarIcon size={24} className="gold-icon" />
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -164,10 +255,10 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
-              Core Specialized Services
+              Core Capabilities
             </span>
-            <h2>Services Designed For <span className="gold-gradient-text">Aggressive Scale</span></h2>
-            <p>Six core growth disciplines executed by senior specialists committed to max ROI.</p>
+            <h2>Specialized Services Designed For <span className="gold-gradient-text">Aggressive Scale</span></h2>
+            <p>Six core growth disciplines executed by senior specialists committed to maximum ROI.</p>
           </div>
 
           <div className="services-grid">
@@ -176,6 +267,10 @@ export default function Home() {
               return (
                 <Reveal key={s.slug} delay={i * 80}>
                   <div className={`glass-card service-card service-card-${s.slug}`}>
+                    <div className="service-card-top-bar">
+                      <span className="service-number">0{i + 1}</span>
+                      <div className="service-target-badge">{s.targetRoi}</div>
+                    </div>
                     <div className="service-card-art">
                       <img src={serviceImages[s.slug]} alt={s.title} loading="lazy" />
                       <span className="service-card-art-overlay" />
@@ -184,7 +279,18 @@ export default function Home() {
                       {Icon && <Icon size={22} className="gold-icon" />}
                     </div>
                     <h3>{s.title}</h3>
-                    <p>{s.short}</p>
+                    <p className="service-card-desc">{s.short}</p>
+
+                    {/* Key Deliverables Bullet Points */}
+                    <div className="service-card-deliverables">
+                      {s.deliverables.slice(0, 3).map((d, dIdx) => (
+                        <div key={dIdx} className="service-deliverable-item">
+                          <CheckCircle2 size={13} className="gold-icon flex-shrink-0" />
+                          <span>{d}</span>
+                        </div>
+                      ))}
+                    </div>
+
                     <Link to="/services" className="service-link">
                       Explore Capabilities <ArrowRight size={14} />
                     </Link>
@@ -238,7 +344,7 @@ export default function Home() {
       {/* REVIEWS & TESTIMONIALS */}
       <section className="section section-dark testimonials-section">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head text-center">
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               Validated Success
             </span>
@@ -268,7 +374,39 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* HIGH-CONVERSION CTA BANNER */}
+      <section className="home-cta-section">
+        <div className="container">
+          <div className="home-cta-banner glass-card">
+            <div className="home-cta-glow"></div>
+            <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
+              <Sparkles size={14} className="gold-icon" /> Ready To Scale?
+            </div>
+            <h2>Let's Build A <span className="gold-gradient-text">High-ROAS Growth Engine</span> For Your Brand</h2>
+            <p className="home-cta-sub">
+              Book a free 30-minute strategy call or connect directly via WhatsApp. We analyze your funnel, review ad account performance, and provide a clear growth roadmap.
+            </p>
+            <div className="home-cta-actions">
+              <button className="btn btn-gold btn-glow" onClick={() => setModalOpen(true)}>
+                <Calendar size={18} /> Book Free Strategy Call <ArrowRight size={18} />
+              </button>
+              <a 
+                href="https://wa.me/923266739989" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn btn-outline-gold"
+              >
+                <MessageCircle size={18} /> Quick WhatsApp Chat
+              </a>
+            </div>
+            <div className="home-cta-perks">
+              <span><Check size={14} className="gold-icon" /> Free Initial Audit</span>
+              <span><Check size={14} className="gold-icon" /> No Long-Term Contracts</span>
+              <span><Check size={14} className="gold-icon" /> Response in Under 24h</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <CalendlyModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
