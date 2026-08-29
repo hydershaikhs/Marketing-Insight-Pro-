@@ -131,11 +131,11 @@ export default function Home() {
           <div className="hero-grid">
             <Reveal direction="left" className="hero-copy">
               <div className="hero-badge">
-                <Sparkles size={14} className="gold-icon" /> Premier Growth Marketing Agency
+                <Sparkles size={14} className="gold-icon pulse-icon" /> Premier Growth Marketing Agency
               </div>
 
               <h1 className="hero-title">
-                Scale Your Revenue With <span className="gold-gradient-text">Precision Meta Ads</span> & Organic Growth
+                Scale Your Revenue With <span className="gold-gradient-text animated-gradient">Precision Meta Ads</span> & Organic Growth
               </h1>
 
               <p className="hero-sub">
@@ -143,14 +143,14 @@ export default function Home() {
               </p>
 
               <div className="hero-actions">
-                <button className="btn btn-gold btn-glow" onClick={() => setModalOpen(true)}>
-                  <Calendar size={18} /> Book Strategy Session <ArrowRight size={18} />
+                <button className="btn btn-gold btn-glow shimmer-btn" onClick={() => setModalOpen(true)}>
+                  <Calendar size={18} /> Book Strategy Session <ArrowRight size={18} className="cta-arrow" />
                 </button>
                 <a 
                   href="https://wa.me/923266739989" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="btn btn-outline-gold"
+                  className="btn btn-outline-gold hover-glow"
                 >
                   <MessageCircle size={18} /> Chat on WhatsApp
                 </a>
@@ -164,9 +164,9 @@ export default function Home() {
             </Reveal>
 
             <Reveal direction="right" className="hero-visual-wrap">
-              <div className="hero-mockup glass-card">
+              <div className="hero-mockup glass-card interactive-mockup">
                 {/* Floating Badges */}
-                <div className="floating-badge badge-roas">
+                <div className="floating-badge badge-roas floating-anim-1">
                   <TrendingUp size={16} className="gold-icon" />
                   <div>
                     <strong>Sales Focus</strong>
@@ -174,7 +174,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="floating-badge badge-reach">
+                <div className="floating-badge badge-reach floating-anim-2">
                   <Users size={16} className="gold-icon" />
                   <div>
                     <strong>50+ Brands</strong>
@@ -193,8 +193,8 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* STATS BAR */}
-          <div className="hero-stats-wrap glass-card">
+          {/* STATS BAR WITH CONTINUOUS RUNNING LASER ANIMATION */}
+          <div className="hero-stats-wrap glass-card interactive-stats">
             {stats.map((s) => (
               <div key={s.label} className="hero-stat-card">
                 <strong className="stat-number">
@@ -203,18 +203,22 @@ export default function Home() {
                 <span className="stat-label">{s.label}</span>
               </div>
             ))}
+            {/* Running Laser Line Animation */}
+            <div className="stats-running-laser-line"></div>
           </div>
 
-          {/* CLIENT BRANDS TICKER STRIP */}
+          {/* CLIENT BRANDS TICKER STRIP WITH INFINITE MARQUEE */}
           <div className="hero-brands-ticker">
-            <span className="brands-ticker-label">TRUSTED BY AMBITIOUS BRANDS & BUSINESSES:</span>
-            <div className="brands-ticker-list">
-              {brands.map((b, i) => (
-                <div key={i} className="brand-ticker-item">
-                  <Sparkles size={12} className="gold-icon" />
-                  <span>{b}</span>
-                </div>
-              ))}
+            <span className="brands-ticker-label">TRUSTED BY AMBITIOUS BRANDS:</span>
+            <div className="brands-marquee-wrapper">
+              <div className="brands-marquee-track">
+                {[...brands, ...brands].map((b, i) => (
+                  <div key={i} className="brand-ticker-item">
+                    <Sparkles size={12} className="gold-icon" />
+                    <span>{b}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -227,7 +231,7 @@ export default function Home() {
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               Why Brands Choose Us
             </span>
-            <h2>Built For <span className="gold-gradient-text">High-Growth Scalability</span></h2>
+            <h2>Built For <span className="gold-gradient-text animated-gradient">High-Growth Scalability</span></h2>
             <p>We eliminate guesswork with transparent processes, senior-level campaign engineering, and a focus on bottom-line profit.</p>
           </div>
 
@@ -236,7 +240,7 @@ export default function Home() {
               const PillarIcon = item.icon;
               return (
                 <Reveal key={idx} delay={idx * 80}>
-                  <div className="pillar-card glass-card">
+                  <div className="pillar-card glass-card pc-hover-lift">
                     <div className="pillar-icon-box">
                       <PillarIcon size={24} className="gold-icon" />
                     </div>
@@ -257,7 +261,7 @@ export default function Home() {
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               Core Capabilities
             </span>
-            <h2>Specialized Services Designed For <span className="gold-gradient-text">Aggressive Scale</span></h2>
+            <h2>Specialized Services Designed For <span className="gold-gradient-text animated-gradient">Aggressive Scale</span></h2>
             <p>Six core growth disciplines executed by senior specialists committed to maximum ROI.</p>
           </div>
 
@@ -266,7 +270,7 @@ export default function Home() {
               const Icon = Icons[s.icon];
               return (
                 <Reveal key={s.slug} delay={i * 80}>
-                  <div className={`glass-card service-card service-card-${s.slug}`}>
+                  <div className={`glass-card service-card service-card-${s.slug} pc-hover-lift`}>
                     <div className="service-card-top-bar">
                       <span className="service-number">0{i + 1}</span>
                       <div className="service-target-badge">{s.targetRoi}</div>
@@ -292,7 +296,7 @@ export default function Home() {
                     </div>
 
                     <Link to="/services" className="service-link">
-                      Explore Capabilities <ArrowRight size={14} />
+                      Explore Capabilities <ArrowRight size={14} className="link-arrow" />
                     </Link>
                   </div>
                 </Reveal>
@@ -301,7 +305,7 @@ export default function Home() {
           </div>
 
           <div className="services-preview-cta">
-            <Link to="/services" className="btn btn-outline-gold">
+            <Link to="/services" className="btn btn-outline-gold hover-glow">
               View Complete Service Catalog &rarr;
             </Link>
           </div>
@@ -315,7 +319,7 @@ export default function Home() {
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               The Growth Blueprint
             </span>
-            <h2>Our 4-Step <span className="gold-gradient-text">Scalability Framework</span></h2>
+            <h2>Our 4-Step <span className="gold-gradient-text animated-gradient">Scalability Framework</span></h2>
             <p>A proven, systematic methodology that consistently transforms ad spend into profitable enterprise growth.</p>
           </div>
 
@@ -324,7 +328,7 @@ export default function Home() {
               const StepIcon = p.icon;
               return (
                 <Reveal key={p.step} delay={i * 90}>
-                  <div className="process-card glass-card">
+                  <div className="process-card glass-card pc-hover-lift">
                     <div className="process-top">
                       <span className="process-number">{p.step}</span>
                       <div className="process-icon">
@@ -348,7 +352,7 @@ export default function Home() {
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               Validated Success
             </span>
-            <h2>Client Case Studies & <span className="gold-gradient-text">Testimonials</span></h2>
+            <h2>Client Case Studies & <span className="gold-gradient-text animated-gradient">Testimonials</span></h2>
             <p>Discover how we help brands break growth plateaus and achieve market leadership.</p>
           </div>
 
@@ -363,47 +367,13 @@ export default function Home() {
             <span className="eyebrow" style={{ justifyContent: 'center' }}>
               Got Questions?
             </span>
-            <h2>Frequently Asked <span className="gold-gradient-text">Questions</span></h2>
+            <h2>Frequently Asked <span className="gold-gradient-text animated-gradient">Questions</span></h2>
             <p>Everything you need to know about working with Marketing Insight Pro.</p>
           </div>
           <div className="faq-list">
             {faqs.map((f) => (
               <FaqItem key={f.q} q={f.q} a={f.a} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HIGH-CONVERSION CTA BANNER */}
-      <section className="home-cta-section">
-        <div className="container">
-          <div className="home-cta-banner glass-card">
-            <div className="home-cta-glow"></div>
-            <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
-              <Sparkles size={14} className="gold-icon" /> Ready To Scale?
-            </div>
-            <h2>Let's Build A <span className="gold-gradient-text">High-ROAS Growth Engine</span> For Your Brand</h2>
-            <p className="home-cta-sub">
-              Book a free 30-minute strategy call or connect directly via WhatsApp. We analyze your funnel, review ad account performance, and provide a clear growth roadmap.
-            </p>
-            <div className="home-cta-actions">
-              <button className="btn btn-gold btn-glow" onClick={() => setModalOpen(true)}>
-                <Calendar size={18} /> Book Free Strategy Call <ArrowRight size={18} />
-              </button>
-              <a 
-                href="https://wa.me/923266739989" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="btn btn-outline-gold"
-              >
-                <MessageCircle size={18} /> Quick WhatsApp Chat
-              </a>
-            </div>
-            <div className="home-cta-perks">
-              <span><Check size={14} className="gold-icon" /> Free Initial Audit</span>
-              <span><Check size={14} className="gold-icon" /> No Long-Term Contracts</span>
-              <span><Check size={14} className="gold-icon" /> Response in Under 24h</span>
-            </div>
           </div>
         </div>
       </section>

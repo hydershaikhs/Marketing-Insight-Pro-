@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MARKETING INSIGHT PRO - HOME PAGE STYLING (MODERN AGENCY ARCHITECTURE)
+   MARKETING INSIGHT PRO - HOME PAGE STYLING (MODERN AGENCY ARCHITECTURE & ANIMATIONS)
    ========================================================================== */
 
 /* HERO STYLING ON WHITE CANVAS */
@@ -54,6 +54,16 @@
   margin-bottom: 20px;
 }
 
+.pulse-icon {
+  animation: pulseIconAnim 2s infinite ease-in-out;
+}
+
+@keyframes pulseIconAnim {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 6px #BD892C); }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
 .hero-title {
   font-size: clamp(34px, 4.4vw, 54px);
   color: var(--navy-deep);
@@ -61,6 +71,21 @@
   line-height: 1.18;
   letter-spacing: -0.02em;
   font-weight: 800;
+}
+
+/* ANIMATED GRADIENT TEXT */
+.animated-gradient {
+  background: linear-gradient(135deg, #d09a3e 0%, #BD892C 40%, #ffd778 70%, #d09a3e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 5s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-sub {
@@ -93,6 +118,46 @@
   margin-bottom: 28px;
 }
 
+/* BUTTON SHIMMER AND ARROW ANIMATION */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent 20%, rgba(255, 255, 255, 0.3) 50%, transparent 80%);
+  transform: rotate(30deg) translateY(-100%);
+  animation: btnShimmerSweep 4s infinite ease-in-out;
+}
+
+@keyframes btnShimmerSweep {
+  0%, 70% { transform: rotate(30deg) translateY(-120%); }
+  100% { transform: rotate(30deg) translateY(120%); }
+}
+
+.cta-arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(189, 137, 44, 0.4);
+  transform: translateY(-2px);
+}
+
 .hero-trust-pills {
   display: flex;
   gap: 12px;
@@ -111,11 +176,19 @@
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid rgba(2, 29, 77, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* HERO VISUAL & FLOATING BADGES */
+.trust-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-primary);
+  background: rgba(189, 137, 44, 0.06);
+}
+
+/* HERO VISUAL & 3D INTERACTIVE MOCKUP (PC ANIMATION) */
 .hero-visual-wrap {
   position: relative;
+  perspective: 1200px;
 }
 
 .hero-mockup {
@@ -125,6 +198,14 @@
   background: var(--navy-surface);
   border: 1.5px solid rgba(219, 183, 98, 0.4);
   box-shadow: 0 24px 60px rgba(21, 44, 101, 0.25), 0 0 35px rgba(219, 183, 98, 0.2);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 992px) {
+  .interactive-mockup:hover {
+    transform: rotateY(-3deg) rotateX(2deg) translateY(-8px);
+    box-shadow: 0 32px 70px rgba(21, 44, 101, 0.35), 0 0 45px rgba(219, 183, 98, 0.3);
+  }
 }
 
 .floating-badge {
@@ -139,18 +220,30 @@
   gap: 12px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
   z-index: 10;
-  animation: float 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
 }
 
-.badge-roas {
+.floating-anim-1 {
   top: -22px;
   left: -22px;
+  animation: floatBadge1 4.5s ease-in-out infinite alternate;
 }
 
-.badge-reach {
+.floating-anim-2 {
   bottom: -22px;
   right: -22px;
-  animation-delay: 2s;
+  animation: floatBadge2 4s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatBadge1 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes floatBadge2 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(1deg); }
 }
 
 .floating-badge strong {
@@ -202,18 +295,28 @@
   object-fit: cover;
 }
 
-/* STATS BAR */
+/* ==========================================================================
+   STATS BAR & RUNNING LASER LINE ANIMATION (USER REQUEST)
+   ========================================================================== */
 .hero-stats-wrap {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
-  padding: 28px 36px;
+  padding: 28px 36px 32px;
   border: 1.5px solid rgba(219, 183, 98, 0.35);
   background: var(--navy-deep);
   color: #FFFFFF;
   border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(21, 44, 101, 0.15);
+  box-shadow: 0 15px 35px rgba(21, 44, 101, 0.15), 0 0 25px rgba(219, 183, 98, 0.1);
   margin-bottom: 36px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-stats:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(21, 44, 101, 0.25), 0 0 35px rgba(219, 183, 98, 0.2);
 }
 
 .hero-stat-card {
@@ -233,6 +336,7 @@
   display: block;
   margin-bottom: 4px;
   font-weight: 800;
+  text-shadow: 0 0 20px rgba(189, 137, 44, 0.3);
 }
 
 .stat-label {
@@ -241,17 +345,46 @@
   font-weight: 500;
 }
 
-/* BRANDS TICKER STRIP */
+/* CONTINUOUS FLOWING LASER LINE ANIMATION */
+.stats-running-laser-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(219, 183, 98, 0.2);
+  overflow: hidden;
+}
+
+.stats-running-laser-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(219, 183, 98, 0.2) 20%, #ffd778 50%, #BD892C 80%, transparent 100%);
+  box-shadow: 0 0 16px #ffd778, 0 0 28px #BD892C;
+  animation: laserStreamMove 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes laserStreamMove {
+  0% { left: -60%; }
+  100% { left: 120%; }
+}
+
+/* ==========================================================================
+   BRANDS TICKER STRIP WITH INFINITE MARQUEE
+   ========================================================================== */
 .hero-brands-ticker {
   background: rgba(2, 29, 77, 0.03);
   border: 1px solid rgba(2, 29, 77, 0.06);
   border-radius: 14px;
-  padding: 18px 24px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .brands-ticker-label {
@@ -260,27 +393,63 @@
   letter-spacing: 0.1em;
   color: var(--gold-deep);
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.brands-ticker-list {
+.brands-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.brands-marquee-track {
   display: flex;
-  gap: 24px;
-  align-items: center;
-  flex-wrap: wrap;
+  gap: 36px;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.brands-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .brand-ticker-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 8px;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--navy-deep);
-  transition: color 0.25s ease;
+  white-space: nowrap;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .brand-ticker-item:hover {
   color: var(--gold-primary);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   PC HOVER & LIFT ANIMATIONS
+   ========================================================================== */
+.pc-hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+}
+
+@media (min-width: 992px) {
+  .pc-hover-lift:hover {
+    transform: translateY(-8px) !important;
+    border-color: var(--gold-primary) !important;
+    box-shadow: 0 24px 50px -10px rgba(21, 44, 101, 0.45), 0 0 30px rgba(219, 183, 98, 0.25) !important;
+  }
 }
 
 /* WHY CHOOSE US / AGENCY PILLARS */
@@ -306,13 +475,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.pillar-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 20px 40px -8px rgba(21, 44, 101, 0.4), 0 0 25px rgba(219, 183, 98, 0.2);
 }
 
 .pillar-icon-box {
@@ -325,6 +487,12 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(189, 137, 44, 0.22);
 }
 
 .pillar-card h3 {
@@ -363,13 +531,6 @@
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 24px 50px -10px rgba(21, 44, 101, 0.4), 0 0 30px rgba(219, 183, 98, 0.25);
 }
 
 .service-card-top-bar {
@@ -441,6 +602,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  transform: rotate(6deg) scale(1.08);
 }
 
 .service-card h3 {
@@ -491,6 +657,14 @@
   gap: 10px;
 }
 
+.link-arrow {
+  transition: transform 0.25s ease;
+}
+
+.service-link:hover .link-arrow {
+  transform: translateX(4px);
+}
+
 .services-preview-cta {
   text-align: center;
   margin-top: 20px;
@@ -517,13 +691,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.process-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 20px 40px -8px rgba(21, 44, 101, 0.4), 0 0 25px rgba(219, 183, 98, 0.2);
 }
 
 .process-top {
@@ -550,6 +717,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover .process-icon {
+  transform: scale(1.12);
 }
 
 .process-card h3 {
@@ -592,12 +764,13 @@
   overflow: hidden;
   margin-bottom: 12px;
   background: #ffffff;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .faq-item:hover {
-  box-shadow: 0 4px 24px rgba(2, 29, 77, 0.07);
+  box-shadow: 0 6px 28px rgba(2, 29, 77, 0.08);
   border-color: rgba(189, 137, 44, 0.35);
+  transform: translateY(-2px);
 }
 
 .faq-item.is-open {
@@ -674,79 +847,6 @@
   margin: 0;
 }
 
-/* HIGH-CONVERSION CTA SECTION */
-.home-cta-section {
-  padding: 80px 0 100px;
-  background: #FFFFFF;
-}
-
-.home-cta-banner {
-  position: relative;
-  text-align: center;
-  padding: 64px 36px;
-  border-radius: var(--radius-lg);
-  background: radial-gradient(circle at 50% 0%, #07265e 0%, #021D4D 100%) !important;
-  border: 1.5px solid rgba(219, 183, 98, 0.4) !important;
-  box-shadow: 0 25px 60px rgba(2, 29, 77, 0.25), 0 0 35px rgba(219, 183, 98, 0.2);
-  overflow: hidden;
-}
-
-.home-cta-glow {
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(189, 137, 44, 0.25) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.home-cta-banner h2 {
-  font-size: clamp(28px, 4vw, 44px);
-  color: #FFFFFF;
-  margin-bottom: 18px;
-  font-weight: 800;
-}
-
-.home-cta-sub {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 640px;
-  margin: 0 auto 36px;
-  line-height: 1.7;
-}
-
-.home-cta-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.home-cta-perks {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 600;
-}
-
-.home-cta-perks span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* FLOATING ANIMATIONS */
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
-}
-
 /* RESPONSIVE STYLES */
 @media (max-width: 960px) {
   .hero-grid {
@@ -775,9 +875,6 @@
     top: 0;
     left: 0;
     margin-bottom: 10px;
-  }
-  .home-cta-banner {
-    padding: 40px 20px;
   }
   .services-grid {
     grid-template-columns: 1fr;
