@@ -215,7 +215,7 @@ export default function Home() {
             <span className="brands-ticker-label">VALIDATED RESULTS & TRUST:</span>
             <div className="brands-marquee-wrapper">
               <div className="brands-marquee-track">
-                {[...trustHighlights, ...trustHighlights].map((item, i) => (
+                {[...trustHighlights, ...trustHighlights, ...trustHighlights, ...trustHighlights].map((item, i) => (
                   <div key={i} className="trust-ticker-pill">
                     <Sparkles size={13} className="gold-icon" />
                     <strong className="ticker-brand-name">{item.name}</strong>
