@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import { services } from '../data/services.js';
@@ -124,6 +124,20 @@ const faqs = [
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay handled
+        });
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -193,11 +207,13 @@ export default function Home() {
                 </div>
                 <div className="hero-video-wrap">
                   <video
+                    ref={videoRef}
                     src="/hero-video.mp4"
                     autoPlay
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     className="hero-dashboard-video"
                   />
                 </div>
