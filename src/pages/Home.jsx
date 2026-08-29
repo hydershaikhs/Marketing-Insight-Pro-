@@ -191,7 +191,16 @@ export default function Home() {
                   </div>
                   <span className="mockup-title">Live Analytics Dashboard</span>
                 </div>
-                <img src={heroDashboard} alt="Marketing Performance Analytics Dashboard" className="hero-dashboard-img" loading="eager" />
+                <div className="hero-video-wrap">
+                  <video
+                    src="/hero-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="hero-dashboard-video"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
