@@ -40,7 +40,7 @@ const values = [
   },
   {
     title: 'Direct Executive Access',
-    desc: 'You work directly with senior growth architects who own your results â€” no junior intern pass-offs.',
+    desc: 'You work directly with senior growth architects who own your results — no junior intern pass-offs.',
     icon: Users
   },
   {
