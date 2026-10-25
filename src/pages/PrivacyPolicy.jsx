@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <p className="legal-updated">Last updated: 2026</p>
 
       <p>
-        Marketing Insight Pro ("we", "us") respects your privacy. This page explains what
+        HS Creatives ("we", "us") respects your privacy. This page explains what
         information we collect through this website and how we use it.
       </p>
 

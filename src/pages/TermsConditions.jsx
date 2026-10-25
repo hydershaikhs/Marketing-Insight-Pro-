@@ -7,7 +7,7 @@ export default function TermsConditions() {
       <p className="legal-updated">Last updated: 2026</p>
 
       <p>
-        These terms apply when you use this website or engage Marketing Insight Pro for
+        These terms apply when you use this website or engage HS Creatives for
         services. By using this site or working with us, you agree to the terms below.
       </p>
 

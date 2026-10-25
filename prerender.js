@@ -20,44 +20,44 @@ const template = fs.readFileSync(indexPath, 'utf-8');
 const routes = [
   {
     path: 'services',
-    title: 'Growth Services | Marketing Insight Pro',
-    desc: 'Performant marketing services: high-ROAS Meta Ads setups, technical SEO audits, high-retention video editing, and custom social post designs.',
+    title: 'Growth Services | HS Creatives — Create • Connect • Convert',
+    desc: 'Performant marketing & creative services: high-ROAS Meta Ads setups, technical SEO audits, high-retention video editing, and custom social post designs.',
     canonical: 'https://marketinginsightpro.vercel.app/services'
   },
   {
     path: 'portfolio',
-    title: 'Portfolio | Marketing Insight Pro — Meta Ads & SEO Agency Pakistan',
+    title: 'Portfolio & Case Studies | HS Creatives — Digital Agency',
     desc: 'Explore real-world case studies across Meta Ads, SEO audits, video editing, social media management, and strategic copywriting campaigns.',
     canonical: 'https://marketinginsightpro.vercel.app/portfolio'
   },
   {
     path: 'about',
-    title: 'About Our Vision & Agency | Marketing Insight Pro',
-    desc: 'Learn about our performance agency in Pakistan, our custom campaign methodologies, and our mission to scale brands to new heights.',
+    title: 'About Our Vision & Agency | HS Creatives',
+    desc: 'Learn about HS Creatives in Pakistan, our custom campaign methodologies, and our mission to help brands Create, Connect, and Convert.',
     canonical: 'https://marketinginsightpro.vercel.app/about'
   },
   {
     path: 'contact',
-    title: 'Free Digital Consultation | Marketing Insight Pro',
-    desc: 'Schedule a strategy call or request a free campaign audit. Our digital growth experts respond in under 24 hours.',
+    title: 'Free Strategy Consultation | HS Creatives',
+    desc: 'Schedule a strategy call or request a free campaign audit with HS Creatives. Our growth experts respond in under 24 hours.',
     canonical: 'https://marketinginsightpro.vercel.app/contact'
   },
   {
     path: 'privacy-policy',
-    title: 'Privacy Policy | Marketing Insight Pro',
-    desc: 'Privacy Policy guidelines and data collection procedures for Marketing Insight Pro.',
+    title: 'Privacy Policy | HS Creatives',
+    desc: 'Privacy Policy guidelines and data collection procedures for HS Creatives.',
     canonical: 'https://marketinginsightpro.vercel.app/privacy-policy'
   },
   {
     path: 'terms-conditions',
-    title: 'Terms & Conditions | Marketing Insight Pro',
+    title: 'Terms & Conditions | HS Creatives',
     desc: 'Terms & Conditions governing direct marketing consultations and campaign audits.',
     canonical: 'https://marketinginsightpro.vercel.app/terms-conditions'
   },
   {
     path: 'cookie-policy',
-    title: 'Cookie Policy | Marketing Insight Pro',
-    desc: 'Cookies and tracker configurations utilized by Marketing Insight Pro.',
+    title: 'Cookie Policy | HS Creatives',
+    desc: 'Cookies and tracker configurations utilized by HS Creatives.',
     canonical: 'https://marketinginsightpro.vercel.app/cookie-policy'
   }
 ];

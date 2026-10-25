@@ -4,21 +4,21 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 14px 0;
+  padding: 12px 0;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(2, 29, 77, 0.08);
+  background: rgba(7, 8, 11, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-header.scrolled {
   padding: 10px 0;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(7, 8, 11, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 6px 24px rgba(2, 29, 77, 0.1);
-  border-bottom: 1px solid rgba(189, 137, 44, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(159, 232, 35, 0.3);
 }
 
 .navbar-container {
@@ -34,14 +34,15 @@
 }
 
 .brand-logo {
-  height: 40px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
 .navbar-brand:hover .brand-logo {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* Desktop Nav links */
@@ -57,7 +58,7 @@
   font-family: var(--font-ui);
   font-size: 14px;
   font-weight: 600;
-  color: #021D4D;
+  color: #CBD5E1;
   position: relative;
   padding: 4px 0;
   transition: color 0.25s ease;
@@ -106,7 +107,7 @@
   align-items: center;
   gap: 8px;
   background: var(--gold-gradient) !important;
-  color: #FFFFFF !important;
+  color: #060709 !important;
   box-shadow: var(--shadow-gold);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border: none;
@@ -116,16 +117,14 @@
 
 .navbar-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(189, 137, 44, 0.45);
+  box-shadow: 0 8px 24px rgba(159, 232, 35, 0.55);
 }
-
-
 
 .mobile-toggle {
   display: none;
   background: transparent;
   border: none;
-  color: #021D4D;
+  color: #F1F5F9;
   cursor: pointer;
   padding: 4px;
   border-radius: 6px;
@@ -134,7 +133,7 @@
 }
 
 .mobile-toggle:hover {
-  background: rgba(2, 29, 77, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Mobile Drawer */
@@ -144,10 +143,10 @@
   top: 64px;
   left: 0;
   right: 0;
-  background: #FFFFFF;
-  border-bottom: 2px solid rgba(189, 137, 44, 0.4);
+  background: #0B0E14;
+  border-bottom: 2px solid rgba(159, 232, 35, 0.4);
   padding: 20px 24px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
   flex-direction: column;
   gap: 16px;
   z-index: 999;
@@ -163,9 +162,9 @@
   font-family: var(--font-ui);
   font-size: 15px;
   font-weight: 600;
-  color: #021D4D;
+  color: #E2E8F0;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: block;
   transition: color 0.2s ease;
 }
@@ -216,7 +215,7 @@
 
 @media (max-width: 480px) {
   .brand-logo {
-    height: 32px;
+    height: 36px;
   }
 
   .navbar-cta-btn {
@@ -226,6 +225,6 @@
   }
   
   .navbar-cta-btn svg {
-    display: none; /* Hide calendar & arrow icons to save space on small mobile screens */
+    display: none;
   }
 }

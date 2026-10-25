@@ -148,15 +148,15 @@ export default function Home() {
           <div className="hero-grid">
             <Reveal direction="left" className="hero-copy">
               <div className="hero-badge">
-                <Sparkles size={14} className="gold-icon pulse-icon" /> Premier Growth Marketing Agency
+                <Sparkles size={14} className="gold-icon pulse-icon" /> HS Creatives • Create • Connect • Convert
               </div>
 
               <h1 className="hero-title">
-                Scale Your Revenue With <span className="gold-gradient-text animated-gradient">Precision Meta Ads</span> & Organic Growth
+                Scale Your Revenue With <span className="gold-gradient-text animated-gradient">Precision Meta Ads</span> & Creative Performance
               </h1>
 
               <p className="hero-sub">
-                From sales-focused Meta Ads campaigns and technical SEO audits to viral short-form video editing, visual branding, and strategic copywriting — engineered for ambitious businesses.
+                From sales-focused Meta Ads campaigns and technical SEO audits to viral short-form video editing, visual branding, and strategic copywriting — engineered by HS Creatives to help brands Create, Connect, and Convert.
               </p>
 
               <div className="hero-actions">
@@ -397,7 +397,7 @@ export default function Home() {
               Got Questions?
             </span>
             <h2>Frequently Asked <span className="gold-gradient-text animated-gradient">Questions</span></h2>
-            <p>Everything you need to know about working with Marketing Insight Pro.</p>
+            <p>Everything you need to know about working with HS Creatives.</p>
           </div>
           <div className="faq-list">
             {faqs.map((f) => (

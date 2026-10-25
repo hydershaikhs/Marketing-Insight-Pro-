@@ -33,7 +33,7 @@ export default function Navbar() {
       <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
           <Link to="/" className="navbar-brand">
-            <img src={logoWide} alt="Marketing Insight Pro" className="brand-logo" />
+            <img src={logoWide} alt="HS Creatives" className="brand-logo" />
           </Link>
 
           {/* Desktop Nav links */}

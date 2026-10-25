@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Mail, Phone, MapPin, Send, CheckCircle2, Linkedin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 import logoWide from '../assets/logo-wide.png';
 import './Footer.css';
 
@@ -17,11 +17,11 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Link to="/" className="footer-logo-link">
               <div className="footer-logo-box">
-                <img src={logoWide} alt="Marketing Insight Pro Logo" className="footer-logo" />
+                <img src={logoWide} alt="HS Creatives Logo" className="footer-logo" />
               </div>
             </Link>
             <p className="brand-desc">
-              Marketing Insight Pro is an enterprise digital growth agency specializing in high-ROAS Meta Ads, Technical SEO, High-Converting Video Editing, Social Media Post Design, Social Media Management, and Copywriting.
+              HS Creatives is an elite creative and performance agency specializing in high-ROAS Meta Ads, Technical SEO, High-Converting Video Editing, Social Media Management, and Direct-Response Copywriting. Create • Connect • Convert.
             </p>
             <div className="social-links">
               <a href="https://www.facebook.com/MarketingInsightPro" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Marketing Insight Pro. All Rights Reserved. Crafted for High-Growth Brands.</p>
+          <p>&copy; {new Date().getFullYear()} HS Creatives. All Rights Reserved. Create • Connect • Convert.</p>
 
           <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
             Back to top <ArrowUp size={16} />

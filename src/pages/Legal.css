@@ -1,7 +1,7 @@
 ﻿.legal-page {
   max-width: 780px;
   margin: 0 auto;
-  padding: 64px 24px 80px;
+  padding: 120px 24px 80px;
 }
 
 .legal-page h1 {
@@ -36,6 +36,6 @@
 }
 
 .legal-page a {
-  color: var(--gold-deep);
+  color: var(--gold-primary);
   font-weight: 600;
 }

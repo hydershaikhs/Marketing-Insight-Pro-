@@ -21,7 +21,7 @@ export default function Portfolio() {
   const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Portfolio | Marketing Insight Pro — Meta Ads & SEO Agency Pakistan";
+    document.title = "Portfolio | HS Creatives — Create • Connect • Convert";
   }, []);
 
   const filters = ['All', 'Meta Ads', 'SEO', 'Video Editing', 'Social Media', 'Copywriting'];

@@ -1,30 +1,30 @@
 :root {
   /* --- Brand Tokens (Gold #BD892C | Navy #021D4D) --- */
-  --navy-deep: #021D4D;      /* Exact logo navy blue */
-  --navy-surface: #07265e;   /* Elevated navy card surface */
-  --navy-card: #0c2e6e;      /* Dark navy container */
-  --navy-soft: #113480;      /* Interactive hover state */
-  --navy-light: #173c92;     /* Border glow navy */
+  --navy-deep: #060709;      /* Exact logo navy blue */
+  --navy-surface: #0D1017;   /* Elevated navy card surface */
+  --navy-card: #121622;      /* Dark navy container */
+  --navy-soft: #1A202E;      /* Interactive hover state */
+  --navy-light: #252D3F;     /* Border glow navy */
 
   /* Exact Logo Gold System */
-  --gold-primary: #BD892C;   /* Exact logo golden color */
-  --gold-light: #d09a3e;     /* Brighter logo gold highlight */
-  --gold-mid: #a87625;       /* Mid-depth gold */
-  --gold-deep: #8f5e1a;      /* Deep shadow gold */
-  --gold-gradient: linear-gradient(135deg, #d09a3e 0%, #BD892C 50%, #a87625 100%);
-  --gold-text-gradient: linear-gradient(135deg, #d09a3e 0%, #BD892C 100%);
-  --gold-glow: rgba(189, 137, 44, 0.3);
+  --gold-primary: #9FE823;   /* Exact logo golden color */
+  --gold-light: #B5F83C;     /* Brighter logo gold highlight */
+  --gold-mid: #86D411;       /* Mid-depth gold */
+  --gold-deep: #65A30D;      /* Deep shadow gold */
+  --gold-gradient: linear-gradient(135deg, #B5F83C 0%, #9FE823 50%, #72C507 100%);
+  --gold-text-gradient: linear-gradient(135deg, #FFFFFF 15%, #D4FFA3 55%, #9FE823 100%);
+  --gold-glow: rgba(159, 232, 35, 0.4);
 
   /* Light Canvas Theme */
-  --paper: #FFFFFF;
-  --paper-soft: #FFFFFF;
-  --paper-card: #021D4D;
-  --border-light: #E2E8F0;
-  --border-gold: rgba(189, 137, 44, 0.3);
-  --heading: #021D4D;
-  --ink: #000000;
-  --slate: #1E293B;
-  --slate-light: #475569;
+  --paper: #07080B;
+  --paper-soft: #0C0E14;
+  --paper-card: #121622;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(159, 232, 35, 0.35);
+  --heading: #FFFFFF;
+  --ink: #F1F5F9;
+  --slate: #94A3B8;
+  --slate-light: #64748B;
 
   /* Fonts */
   --font-display: 'Plus Jakarta Sans', 'Outfit', -apple-system, sans-serif;
@@ -36,9 +36,9 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --container: 1280px;
-  --shadow-gold: 0 10px 30px -8px rgba(189, 137, 44, 0.35);
-  --shadow-navy: 0 20px 50px rgba(2, 29, 77, 0.08);
-  --shadow-card: 0 10px 30px -5px rgba(2, 29, 77, 0.06);
+  --shadow-gold: 0 10px 30px -8px rgba(159, 232, 35, 0.45);
+  --shadow-navy: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -109,7 +109,7 @@ button {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #07080B;
 }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--gold-primary), var(--navy-deep));
@@ -127,12 +127,12 @@ button {
 .section {
   padding: 60px 0;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #07080B;
 }
 
 .section-dark {
-  background-color: #FFFFFF; /* Canvas background white */
-  color: #000000;
+  background-color: #07080B;
+  color: #F1F5F9;
 }
 
 .section-dark h1,
@@ -143,13 +143,13 @@ button {
 }
 
 .section-surface {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #0C0E14;
+  color: #F1F5F9;
 }
 
 .section-light {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #0F131C;
+  color: #F1F5F9;
 }
 
 .section-head {
@@ -161,17 +161,17 @@ button {
 .section-head h2 {
   font-size: clamp(30px, 4vw, 46px);
   margin-bottom: 16px;
-  color: var(--navy-deep);
+  color: #FFFFFF;
 }
 
 .section-head p {
   font-size: 1.125rem;
-  color: #000000;
+  color: #94A3B8;
   font-weight: 500;
 }
 
 .section-dark .section-head p {
-  color: #000000;
+  color: #94A3B8;
 }
 
 /* Eyebrow Tag */
@@ -197,7 +197,7 @@ button {
 
 /* Exact Logo Gold Text Gradient Utility */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #d09a3e 0%, #BD892C 100%);
+  background: linear-gradient(135deg, #FFFFFF 15%, #D4FFA3 55%, #9FE823 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -205,7 +205,7 @@ button {
 }
 
 .section-dark .gold-gradient-text {
-  background: linear-gradient(135deg, #d09a3e 0%, #BD892C 100%);
+  background: linear-gradient(135deg, #FFFFFF 15%, #D4FFA3 55%, #9FE823 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -292,8 +292,8 @@ button {
 
 /* Cards System - All Cards Set To Dark Blue Canvas With White Text */
 .glass-card {
-  background: var(--navy-surface); /* Exact logo navy blue card */
-  border: 1px solid rgba(219, 183, 98, 0.3);
+  background: rgba(18, 22, 34, 0.85);
+  border: 1px solid rgba(159, 232, 35, 0.22);
   border-radius: var(--radius-lg);
   box-shadow: 0 14px 36px rgba(21, 44, 101, 0.12);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -315,19 +315,19 @@ button {
 
 .glass-card:hover {
   border-color: var(--gold-primary);
-  box-shadow: 0 20px 48px -8px rgba(21, 44, 101, 0.25), 0 0 25px rgba(219, 183, 98, 0.25);
+  box-shadow: 0 20px 48px -8px rgba(21, 44, 101, 0.25), 0 0 25px rgba(159, 232, 35, );
   transform: translateY(-6px);
 }
 
 .section-dark .glass-card {
-  background: var(--navy-card);
-  border: 1px solid rgba(219, 183, 98, 0.3);
+  background: rgba(18, 22, 34, 0.92);
+  border: 1px solid rgba(159, 232, 35, 0.22);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .section-dark .glass-card:hover {
   border-color: var(--gold-primary);
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.4), 0 0 25px rgba(219, 183, 98, 0.25);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.4), 0 0 25px rgba(159, 232, 35, );
 }
 
 /* Scroll Reveal Base - Extra Smooth */
@@ -360,12 +360,12 @@ button {
 
 /* Page Header Banner */
 .page-header {
-  background: radial-gradient(circle at 50% 20%, #1a3370 0%, var(--navy-deep) 100%);
+  background: radial-gradient(circle at 50% 20%, #151D2A 0%, #07080B 100%);
   padding: 130px 0 76px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(219, 183, 98, 0.2);
+  border-bottom: 1px solid rgba(159, 232, 35, );
 }
 
 .page-header h1 {
@@ -453,7 +453,7 @@ button {
 
 .glass-card:hover {
   border-color: var(--gold-primary);
-  box-shadow: 0 24px 48px -8px rgba(21, 44, 101, 0.28), 0 0 30px rgba(219, 183, 98, 0.2);
+  box-shadow: 0 24px 48px -8px rgba(21, 44, 101, 0.28), 0 0 30px rgba(159, 232, 35, );
   transform: translateY(-8px);
 }
 
@@ -478,7 +478,7 @@ button {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at 30% 40%, rgba(219, 183, 98, 0.08) 0%, transparent 50%),
+  background: radial-gradient(ellipse at 30% 40%, rgba(159, 232, 35, ) 0%, transparent 50%),
               radial-gradient(ellipse at 70% 60%, rgba(255, 255, 255, 0.04) 0%, transparent 40%);
   animation: headerShimmer 12s ease-in-out infinite alternate;
   pointer-events: none;

@@ -77,12 +77,12 @@ export default function About() {
           <Reveal direction="left">
             <div className="story-copy">
               <span className="eyebrow">Our Philosophy</span>
-              <h2>Why We Built <span className="gold-gradient-text">Marketing Insight Pro</span></h2>
+              <h2>Why We Built <span className="gold-gradient-text">HS Creatives</span></h2>
               <p>
                 The traditional digital agency model is broken. Most agencies lock clients into long-term retainers, delegate work to inexperienced junior staff, and hide behind vague brand awareness reports.
               </p>
               <p>
-                We founded Marketing Insight Pro to provide ambitious founders with an elite, accountable growth partner based in <strong>Pakistan, Hyderabad</strong> serving clients worldwide.
+                We founded HS Creatives to provide ambitious founders with an elite, accountable growth partner driven by our core mantra: Create, Connect, and Convert, based in <strong>Pakistan, Hyderabad</strong> serving clients worldwide.
               </p>
               <div className="story-highlights">
                 <div className="sh-item"><CheckCircle2 size={18} className="gold-icon" /> 100% Data-Driven Decision Making</div>

@@ -1,5 +1,5 @@
 ﻿// Original, hand-built SVG illustrations for each service â€” navy + gold themed
-// to match the Marketing Insight Pro brand. No external images are used here.
+// to match the HS Creatives brand. No external images are used here.
 
 const wrap = (children) => (
   <svg viewBox="0 0 240 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
