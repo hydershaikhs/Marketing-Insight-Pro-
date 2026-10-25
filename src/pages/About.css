@@ -12,7 +12,7 @@
 
 .story-copy p {
   font-size: 16px;
-  color: #CBD5E1;
+  color: #475569;
   margin-bottom: 18px;
   line-height: 1.7;
 }
@@ -30,27 +30,27 @@
   gap: 10px;
   font-size: 14.5px;
   font-weight: 600;
-  color: #CBD5E1;
+  color: #475569;
 }
 
 .about-stats-card {
   padding: 40px;
-  border: 1.5px solid rgba(159, 232, 35, 0.35);
-  background: var(--navy-surface);
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
   border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .about-stats-card h3 {
   font-size: 26px;
-  color: #FFFFFF !important;
+  color: #0A0D14 !important;
   margin-bottom: 24px;
 }
 
 .about-stat-row {
   padding: 16px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .about-stat-row:last-of-type {
@@ -72,7 +72,7 @@
 
 .about-stat-row span {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #475569;
   font-weight: 600;
 }
 

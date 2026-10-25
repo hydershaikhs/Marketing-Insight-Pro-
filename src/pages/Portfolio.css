@@ -48,7 +48,7 @@
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 800;
-  color: #fff;
+  color: #0A0D14;
   margin: 8px 0 4px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .filter-tab-btn:hover {
-  color: #fff;
+  color: #0A0D14;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -121,8 +121,8 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  border: 1.5px solid rgba(159, 232, 35, 0.25);
-  background: var(--navy-surface);
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
   border-radius: var(--radius-lg);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -201,7 +201,7 @@
 
 .portfolio-content h3 {
   font-size: 20px;
-  color: #fff;
+  color: #0A0D14;
   margin-bottom: 12px;
   font-weight: 800;
 }
@@ -214,7 +214,7 @@
 }
 
 .card-result-preview-text strong {
-  color: #fff;
+  color: #0A0D14;
 }
 
 .card-view-btn {
@@ -289,7 +289,7 @@
   padding: 32px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(159, 232, 35, 0.18);
-  background: var(--navy-surface);
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -331,7 +331,7 @@
 
 .t-name {
   font-size: 15px;
-  color: #fff;
+  color: #0A0D14;
   margin-bottom: 2px;
   font-weight: 700;
 }
@@ -391,7 +391,7 @@
 
 .modal-close-btn:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #0A0D14;
   transform: rotate(90deg);
 }
 
@@ -401,7 +401,7 @@
 
 .modal-header h2 {
   font-size: clamp(22px, 3.2vw, 30px);
-  color: #fff;
+  color: #0A0D14;
   margin: 6px 0 10px;
 }
 
@@ -446,7 +446,7 @@
 
 .modal-section-box h3 {
   font-size: 16px;
-  color: #fff;
+  color: #0A0D14;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -498,7 +498,7 @@
 .outcome-result-text {
   font-size: 14.5px;
   font-weight: 600;
-  color: #fff;
+  color: #0A0D14;
   display: flex;
   align-items: center;
   gap: 8px;

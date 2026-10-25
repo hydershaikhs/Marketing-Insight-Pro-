@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp, Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
-import logoWide from '../assets/logo-wide.png';
+import logoDark from '../assets/logo-dark.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Link to="/" className="footer-logo-link">
               <div className="footer-logo-box">
-                <img src={logoWide} alt="HS Creatives Logo" className="footer-logo" />
+                <img src={logoDark} alt="HS Creatives Logo" className="footer-logo" />
               </div>
             </Link>
             <p className="brand-desc">
