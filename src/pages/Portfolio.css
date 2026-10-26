@@ -6,7 +6,7 @@
 .portfolio-hero {
   position: relative;
   padding: 120px 0 80px !important;
-  background: radial-gradient(circle at 50% -20%, #031e54 0%, #021233 100%) !important;
+  background: #060709 !important;
 }
 
 .portfolio-main-title {
@@ -48,7 +48,7 @@
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 800;
-  color: #0A0D14;
+  color: #FFFFFF;
   margin: 8px 0 4px;
 }
 
@@ -98,13 +98,13 @@
 }
 
 .filter-tab-btn:hover {
-  color: #0A0D14;
+  color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);
 }
 
 .filter-tab-btn.active {
-  background: var(--gold-gradient);
-  color: #000;
+  background: #9FE823;
+  color: #060709;
   box-shadow: 0 4px 14px rgba(159, 232, 35, 0.4);
   font-weight: 700;
 }
@@ -121,8 +121,8 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  border: 1px solid #E2E8F0;
-  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111520;
   border-radius: var(--radius-lg);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -159,8 +159,8 @@
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background: var(--gold-primary);
-  color: #000;
+  background: #9FE823;
+  color: #060709;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 12px;
@@ -201,7 +201,7 @@
 
 .portfolio-content h3 {
   font-size: 20px;
-  color: #0A0D14;
+  color: #FFFFFF;
   margin-bottom: 12px;
   font-weight: 800;
 }
@@ -214,7 +214,7 @@
 }
 
 .card-result-preview-text strong {
-  color: #0A0D14;
+  color: #FFFFFF;
 }
 
 .card-view-btn {
@@ -289,7 +289,7 @@
   padding: 32px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(159, 232, 35, 0.18);
-  background: #FFFFFF;
+  background: #111520;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -320,8 +320,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--gold-gradient);
-  color: #000;
+  background: #9FE823;
+  color: #060709;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +331,7 @@
 
 .t-name {
   font-size: 15px;
-  color: #0A0D14;
+  color: #FFFFFF;
   margin-bottom: 2px;
   font-weight: 700;
 }
@@ -391,7 +391,7 @@
 
 .modal-close-btn:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #0A0D14;
+  color: #FFFFFF;
   transform: rotate(90deg);
 }
 
@@ -401,7 +401,7 @@
 
 .modal-header h2 {
   font-size: clamp(22px, 3.2vw, 30px);
-  color: #0A0D14;
+  color: #FFFFFF;
   margin: 6px 0 10px;
 }
 
@@ -446,7 +446,7 @@
 
 .modal-section-box h3 {
   font-size: 16px;
-  color: #0A0D14;
+  color: #FFFFFF;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -498,7 +498,7 @@
 .outcome-result-text {
   font-size: 14.5px;
   font-weight: 600;
-  color: #0A0D14;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 8px;

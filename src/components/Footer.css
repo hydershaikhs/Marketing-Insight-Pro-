@@ -1,6 +1,6 @@
 .footer-wrap {
-  background-color: #050608;
-  border-top: 1px solid rgba(159, 232, 35, 0.2);
+  background-color: #060709;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 48px 0 32px;
   color: rgba(255, 255, 255, 0.75);
   position: relative;
@@ -14,7 +14,7 @@
   gap: 32px;
   margin-bottom: 72px;
   border: 1px solid rgba(159, 232, 35, 0.3);
-  background: rgba(14, 18, 26, 0.85);
+  background: #0F131D;
   flex-wrap: wrap;
   border-radius: var(--radius-lg);
 }
@@ -41,7 +41,7 @@
 
 .newsletter-form input {
   flex: 1;
-  background: rgba(7, 8, 11, 0.8);
+  background: #060709;
   border: 1px solid rgba(159, 232, 35, 0.3);
   padding: 14px 18px;
   border-radius: 10px;
@@ -51,7 +51,7 @@
 }
 
 .newsletter-form input:focus {
-  border-color: var(--gold-primary);
+  border-color: #9FE823;
   box-shadow: 0 0 12px rgba(159, 232, 35, 0.3);
 }
 
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--gold-light);
+  color: #9FE823;
   font-weight: 600;
   font-size: 14px;
 }
@@ -83,7 +83,6 @@
   height: 52px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 .brand-desc {
@@ -113,11 +112,11 @@
 }
 
 .social-links a:hover {
-  background: var(--gold-gradient);
+  background: #9FE823;
   color: #060709;
-  border-color: var(--gold-primary);
+  border-color: #9FE823;
   transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(159, 232, 35, 0.5);
+  box-shadow: 0 0 15px rgba(159, 232, 35, 0.4);
 }
 
 .footer-col h4 {
@@ -142,7 +141,7 @@
 }
 
 .footer-col ul a:hover {
-  color: var(--gold-light);
+  color: #9FE823;
   padding-left: 4px;
 }
 
@@ -160,7 +159,7 @@
 }
 
 .contact-item a:hover {
-  color: var(--gold-light);
+  color: #9FE823;
 }
 
 .footer-bottom {
@@ -177,7 +176,7 @@
 .back-to-top {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(159, 232, 35, 0.3);
-  color: var(--gold-light);
+  color: #9FE823;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 13px;
@@ -188,7 +187,7 @@
 }
 
 .back-to-top:hover {
-  background: var(--gold-primary);
+  background: #9FE823;
   color: #060709;
   box-shadow: 0 0 15px rgba(159, 232, 35, 0.4);
 }

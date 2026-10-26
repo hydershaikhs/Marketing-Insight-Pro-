@@ -17,8 +17,8 @@
 .modal-content {
   width: 100%;
   max-width: 520px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #0D1017;
+  border: 1px solid rgba(159, 232, 35, 0.3);
   padding: 36px 32px;
   position: relative;
   max-height: 90vh;
@@ -30,9 +30,9 @@
   position: absolute;
   top: 18px;
   right: 18px;
-  background: #F1F5F9;
-  border: 1px solid #E2E8F0;
-  color: #0A0D14;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(159, 232, 35, 0.3);
+  color: #FFFFFF;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -43,8 +43,8 @@
 }
 
 .modal-close:hover {
-  background: var(--gold-primary);
-  color: var(--navy-deep);
+  background: #9FE823;
+  color: #060709;
 }
 
 .modal-badge {
@@ -63,7 +63,7 @@
 
 .modal-header h2 {
   font-size: 26px;
-  color: #0A0D14;
+  color: #FFFFFF;
   margin-bottom: 8px;
 }
 
@@ -103,7 +103,7 @@
   border: 1px solid rgba(159, 232, 35, 0.3);
   padding: 12px 14px;
   border-radius: 8px;
-  color: #0A0D14;
+  color: #FFFFFF;
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s ease;
@@ -117,8 +117,8 @@
 }
 
 .form-group select option {
-  background: #FFFFFF;
-  color: #0A0D14;
+  background: #0D1017;
+  color: #FFFFFF;
 }
 
 .modal-submit-btn {
