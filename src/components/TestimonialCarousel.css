@@ -6,10 +6,11 @@
 .testimonial-card {
   padding: 44px 40px;
   position: relative;
-  border: 1px solid rgba(189, 137, 44, 0.35);
-  background: rgba(2, 29, 77, 0.6);
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  color: #101010;
 }
 
 .card-top {
@@ -25,9 +26,9 @@
 }
 
 .result-badge {
-  background: rgba(189, 137, 44, 0.15);
-  border: 1px solid var(--gold-primary);
-  color: var(--gold-light);
+  background: #101010;
+  border: 1px solid #292929;
+  color: #9FE823;
   font-size: 13px;
   font-weight: 700;
   padding: 6px 14px;
@@ -40,7 +41,7 @@
 }
 
 .gold-quote-icon {
-  color: var(--gold-primary);
+  color: #9FE823;
 }
 
 .quote-text {
@@ -48,103 +49,98 @@
   font-size: clamp(18px, 2.5vw, 22px);
   font-weight: 600;
   line-height: 1.65;
-  color: #FFFFFF;
-  margin-bottom: 32px;
+  color: #101010;
+  margin-bottom: 28px;
+  font-style: italic;
 }
 
-.client-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.client-info {
+.testimonial-author {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.client-avatar {
-  width: 52px;
-  height: 52px;
+.author-avatar {
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--gold-primary);
-  box-shadow: 0 0 12px rgba(189, 137, 44, 0.3);
+  border: 2px solid #E2E8F0;
 }
 
-.client-name {
-  font-size: 16.5px;
-  font-weight: 700;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.author-info h4 {
+  font-size: 17px;
+  color: #101010;
+  margin-bottom: 3px;
 }
 
-.verified-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  color: var(--gold-light);
-  font-weight: 500;
-  background: rgba(189, 137, 44, 0.1);
-  padding: 2px 8px;
-  border-radius: 12px;
-}
-
-.client-role {
+.author-role {
   font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.gold-company {
-  color: var(--gold-light);
-  font-weight: 600;
+  color: #555B61;
 }
 
 .carousel-controls {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: #9FE823;
+  width: 28px;
+  border-radius: 10px;
+}
+
+.carousel-arrows {
+  display: flex;
   gap: 12px;
 }
 
-.carousel-counter {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
-}
-
 .carousel-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #101010;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .carousel-btn:hover {
-  background: var(--gold-primary);
-  color: var(--navy-deep);
-  border-color: var(--gold-primary);
+  background: #9FE823;
+  border-color: #9FE823;
+  color: #101010;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
   .testimonial-card {
-    padding: 28px 24px;
+    padding: 28px 20px;
   }
-  .client-footer {
+  .card-top {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
 }

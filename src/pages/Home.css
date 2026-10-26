@@ -6,7 +6,7 @@
 .hero {
   position: relative;
   padding: 120px 0 70px;
-  background-color: #060709;
+  background-color: #FFFFFF;
   background-image: none;
   overflow: hidden;
 }
@@ -37,9 +37,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(159, 232, 35, 0.12);
-  border: 1px solid #9FE823;
-  color: #9FE823;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #101010;
   font-size: 12.5px;
   font-weight: 700;
   padding: 6px 16px;
@@ -59,8 +59,7 @@
 
 .hero-title {
   font-size: clamp(30px, 4.4vw, 52px);
-  color: #FFFFFF;
-  margin-bottom: 20px;
+  color: #101010; margin-bottom: 20px;
   line-height: 1.18;
   letter-spacing: -0.02em;
   font-weight: 800;
@@ -68,10 +67,12 @@
 
 /* ANIMATED GRADIENT TEXT */
 .animated-gradient {
-  color: #9FE823 !important;
+  color: #101010 !important;
   background: none !important;
-  -webkit-text-fill-color: #9FE823 !important;
-  background-clip: border-box !important;
+  -webkit-text-fill-color: #101010 !important;
+  text-decoration: underline;
+  text-decoration-color: #9FE823;
+  text-underline-offset: 6px;
   animation: none !important;
 }
 
@@ -83,8 +84,7 @@
 
 .hero-sub {
   font-size: 1.1rem;
-  color: #94A3B8;
-  margin-bottom: 32px;
+  color: #555B61; margin-bottom: 32px;
   max-width: 580px;
   line-height: 1.7;
 }
@@ -156,11 +156,11 @@
   gap: 6px;
   font-size: 12.5px;
   font-weight: 600;
-  color: #CBD5E1;
-  background: #111520;
+  color: #101010;
+  background: #F8FAFC;
   padding: 6px 14px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -181,9 +181,9 @@
   position: relative;
   padding: 18px;
   border-radius: 24px;
-  background: #0D1017;
-  border: 1.5px solid rgba(159, 232, 35, 0.4);
-  box-shadow: 0 24px 60px rgba(21, 44, 101, 0.25), 0 0 35px rgba(159, 232, 35, 0.2);
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -196,15 +196,15 @@
 
 .floating-badge {
   position: absolute;
-  background: var(--navy-deep);
-  border: 1px solid var(--gold-primary);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #101010;
   padding: 12px 18px;
   border-radius: 14px;
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   z-index: 10;
   transition: transform 0.3s ease;
 }
@@ -232,16 +232,9 @@
   100% { transform: translateY(-10px) rotate(1deg); }
 }
 
-.floating-badge strong {
-  display: block;
-  font-size: 14px;
-  color: var(--gold-primary);
-}
+.floating-badge strong { display: block; font-size: 14px; color: #101010; }
 
-.floating-badge span {
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.75);
-}
+.floating-badge span { font-size: 11.5px; color: #777777; }
 
 .mockup-header {
   display: flex;
@@ -304,11 +297,11 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   padding: 28px 36px 32px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #0F131D;
-  color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #101010;
   border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(21, 44, 101, 0.15), 0 0 25px rgba(159, 232, 35, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   margin-bottom: 36px;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -321,7 +314,7 @@
 
 .hero-stat-card {
   text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid #E2E8F0;
   padding: 0 16px;
 }
 
@@ -332,7 +325,7 @@
 .stat-number {
   font-family: var(--font-display);
   font-size: clamp(28px, 3.2vw, 40px);
-  color: #9FE823;
+  color: #101010;
   display: block;
   margin-bottom: 4px;
   font-weight: 800;
@@ -341,7 +334,7 @@
 
 .stat-label {
   font-size: 13px;
-  color: #94A3B8;
+  color: #555B61;
   font-weight: 500;
 }
 
@@ -430,13 +423,12 @@
 .trust-ticker-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: #111520;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   padding: 7px 16px;
   border-radius: 30px;
-  box-shadow: 0 3px 12px rgba(15, 20, 30, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   white-space: nowrap !important;
   flex-shrink: 0 !important;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -450,7 +442,7 @@
 
 .ticker-brand-name {
   font-size: 13px;
-  color: #FFFFFF;
+  color: #101010;
   font-weight: 700;
 }
 
@@ -508,12 +500,13 @@
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: rgba(159, 232, 35, 0.12);
-  border: 1px solid var(--gold-primary);
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  color: #101010;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
