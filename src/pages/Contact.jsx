@@ -81,8 +81,8 @@ export default function Contact() {
                 <div className="contact-card glass-card">
                   <div className="c-icon-wrap"><Clock size={22} className="gold-icon" /></div>
                   <div>
-                    <strong>Response Time SLA</strong>
-                    <span>Under 24 Hours Guaranteed</span>
+                    <strong>Working Hours</strong>
+                    <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
                   </div>
                 </div>
               </div>

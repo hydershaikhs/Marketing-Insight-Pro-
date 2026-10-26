@@ -103,24 +103,24 @@
   flex-shrink: 0;
 }
 
-/* Primary Nav CTA Button */
+/* Primary Nav CTA Button - Sleek & Compact */
 .navbar-cta-btn {
   background-color: #9FE823 !important;
   background: #9FE823 !important;
   color: #000000 !important;
   font-weight: 700 !important;
-  font-size: 13.5px !important;
-  padding: 9px 20px !important;
+  font-size: 12.5px !important;
+  padding: 6px 16px !important;
   border-radius: 9999px !important;
-  box-shadow: 0 4px 14px rgba(159, 232, 35, 0.4);
+  box-shadow: 0 4px 12px rgba(159, 232, 35, 0.35);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
   flex-shrink: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border: none !important;
-  height: 42px;
+  height: 36px !important;
   cursor: pointer;
 }
 

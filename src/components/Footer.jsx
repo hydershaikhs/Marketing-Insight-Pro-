@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Clock, MessageCircle } from 'lucide-react';
 import logoDark from '../assets/logo-dark.png';
 import './Footer.css';
 
@@ -59,17 +59,21 @@ export default function Footer() {
           </div>
 
           <div className="footer-col contact-col">
-            <h4>Agency Office</h4>
+            <h4>Get In Touch</h4>
             <div className="contact-item">
-              <Mail size={16} className="gold-icon" />
+              <Mail size={16} className="gold-icon flex-shrink-0" />
               <a href="mailto:contactmarketinginsightpro@gmail.com">contactmarketinginsightpro@gmail.com</a>
             </div>
             <div className="contact-item">
-              <Phone size={16} className="gold-icon" />
-              <a href="tel:+923266739989">+92 326 6739989</a>
+              <MessageCircle size={16} className="gold-icon flex-shrink-0" />
+              <a href="https://api.whatsapp.com/send/?phone=923266739989" target="_blank" rel="noreferrer">+92 326 6739989</a>
             </div>
             <div className="contact-item">
-              <MapPin size={16} className="gold-icon" />
+              <Clock size={16} className="gold-icon flex-shrink-0" />
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </div>
+            <div className="contact-item">
+              <MapPin size={16} className="gold-icon flex-shrink-0" />
               <span>Pakistan, Hyderabad</span>
             </div>
           </div>

@@ -281,7 +281,7 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   min-height: 280px;
-  background: #021D4D;
+  background: #000000;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -474,9 +474,9 @@
 /* WHY CHOOSE US / AGENCY PILLARS */
 .agency-pillars-section {
   padding: 90px 0;
-  background: #021233;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .pillars-grid {
@@ -709,7 +709,8 @@
 /* INTERACTIVE PROCESS */
 .process-section {
   padding: 100px 0;
-  background: #021233;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .process-timeline {
@@ -721,12 +722,14 @@
 
 .process-card {
   padding: 32px 28px;
-  background: var(--navy-surface);
-  border: 1.5px solid rgba(159, 232, 35, 0.25);
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
   border-radius: var(--radius-lg);
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
 }
 
 .process-top {
@@ -748,11 +751,12 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(159, 232, 35, 0.12);
-  border: 1px solid var(--gold-primary);
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #101010;
   transition: transform 0.3s ease;
 }
 
@@ -762,7 +766,7 @@
 
 .process-card h3 {
   font-size: 19px;
-  color: #FFFFFF;
+  color: #101010 !important;
   margin-bottom: 12px;
   font-weight: 700;
 }
@@ -770,14 +774,14 @@
 .process-card p {
   font-size: 14px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
+  color: #555B61 !important;
 }
 
 /* REVIEWS & TESTIMONIALS */
 .testimonials-section {
   padding: 100px 0;
-  background: #021233;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
 }
 
 /* FAQ SECTION */
