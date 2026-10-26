@@ -76,7 +76,7 @@ export default function Portfolio() {
       {/* HERO SECTION */}
       <section className="page-header portfolio-hero">
         <div className="container page-header-inner">
-          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
+          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#101010' }}>
             <Sparkles size={14} className="gold-icon" /> Case Studies
           </div>
           <h1 className="portfolio-main-title">Real Results for <span className="gold-gradient-text">Real Businesses</span></h1>

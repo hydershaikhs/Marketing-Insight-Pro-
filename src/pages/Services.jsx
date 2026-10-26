@@ -15,7 +15,7 @@ export default function Services() {
       {/* PAGE HEADER */}
       <section className="page-header">
         <div className="container page-header-inner">
-          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
+          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#101010' }}>
             <Sparkles size={14} className="gold-icon" /> Core Capabilities
           </div>
           <h1>Services Configured For <span className="gold-gradient-text">Sustainable Growth</span></h1>

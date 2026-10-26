@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 12px 0;
+  padding: 10px 0;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   background-color: #000000 !important;
   background: #000000 !important;
@@ -12,7 +12,7 @@
 }
 
 .navbar-header.scrolled {
-  padding: 10px 0;
+  padding: 8px 0;
   background-color: #000000 !important;
   background: #000000 !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
@@ -23,24 +23,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
+/* BIGGER CROPPED LOGO */
 .brand-logo {
-  height: 44px;
+  height: 52px;
   width: auto;
+  max-width: 140px;
   object-fit: contain;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .navbar-brand:hover .brand-logo {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* Desktop Nav links */
@@ -91,6 +95,14 @@
   background-color: #9FE823;
 }
 
+/* Navbar Actions Wrapper - Horizontal Alignment */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 /* Primary Nav CTA Button */
 .navbar-cta-btn {
   background-color: #9FE823 !important;
@@ -109,6 +121,7 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border: none !important;
   height: 42px;
+  cursor: pointer;
 }
 
 .navbar-cta-btn:hover {
@@ -123,10 +136,12 @@
   border: none;
   color: #FFFFFF;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
   border-radius: 8px;
   transition: background 0.2s ease;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-toggle:hover {
@@ -137,7 +152,7 @@
 .mobile-drawer {
   display: none;
   position: fixed;
-  top: 60px;
+  top: 66px;
   left: 0;
   right: 0;
   background-color: #000000 !important;
@@ -165,6 +180,7 @@
   border-bottom: 1px solid #1a1a1a;
   display: block;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .mobile-link:last-child {
@@ -175,7 +191,7 @@
   color: #9FE823;
 }
 
-/* RESPONSIVE NAVBAR FIXES */
+/* RESPONSIVE NAVBAR FIXES (MOBILE ALIGNMENT AS IN SCREENSHOT 2) */
 @media (max-width: 960px) {
   .nav-links {
     display: none;
@@ -183,8 +199,6 @@
 
   .mobile-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .mobile-drawer {
@@ -192,18 +206,31 @@
   }
 
   .navbar-header {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 }
 
 @media (max-width: 600px) {
   .brand-logo {
-    height: 38px;
+    height: 44px;
+    max-width: 120px;
+  }
+
+  .navbar-container {
+    gap: 8px;
+  }
+
+  .navbar-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
   }
 
   .navbar-cta-btn {
     font-size: 12px !important;
-    padding: 7px 12px !important;
+    padding: 6px 14px !important;
     height: 36px !important;
     gap: 5px !important;
   }
@@ -211,16 +238,21 @@
   .navbar-cta-btn .cta-arrow {
     display: none;
   }
+
+  .mobile-toggle {
+    padding: 6px;
+  }
 }
 
 @media (max-width: 380px) {
   .brand-logo {
-    height: 32px;
+    height: 38px;
+    max-width: 100px;
   }
 
   .navbar-cta-btn {
     font-size: 11px !important;
     padding: 5px 10px !important;
-    height: 32px !important;
+    height: 34px !important;
   }
 }

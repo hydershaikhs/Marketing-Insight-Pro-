@@ -41,7 +41,7 @@ export default function Contact() {
       {/* PAGE HEADER */}
       <section className="page-header">
         <div className="container page-header-inner">
-          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
+          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#101010' }}>
             <Sparkles size={14} className="gold-icon" /> Direct Growth Consultation
           </div>
           <h1>Let's Scale Your Brand To <span className="gold-gradient-text">New Heights</span></h1>

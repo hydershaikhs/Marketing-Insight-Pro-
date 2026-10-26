@@ -63,7 +63,7 @@ export default function About() {
       {/* PAGE HEADER */}
       <section className="page-header">
         <div className="container page-header-inner">
-          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#FFFFFF' }}>
+          <div className="hero-badge" style={{ margin: '0 auto 16px', color: '#101010' }}>
             <Sparkles size={14} className="gold-icon" /> Agency Identity
           </div>
           <h1>Built To Scale Brands Through <span className="gold-gradient-text">Uncompromising Data & Design</span></h1>
