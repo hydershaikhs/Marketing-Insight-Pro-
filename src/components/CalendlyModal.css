@@ -1,11 +1,11 @@
-﻿.modal-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(6, 7, 9, 0.88);
-  backdrop-filter: blur(12px);
+  background: rgba(16, 16, 16, 0.75);
+  backdrop-filter: blur(8px);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -17,22 +17,23 @@
 .modal-content {
   width: 100%;
   max-width: 520px;
-  background: #0D1017;
-  border: 1px solid rgba(159, 232, 35, 0.3);
+  background: #FFFFFF;
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius-lg);
   padding: 36px 32px;
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close {
   position: absolute;
   top: 18px;
   right: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(159, 232, 35, 0.3);
-  color: #FFFFFF;
+  background: var(--surface-light);
+  border: 1px solid var(--border-gray);
+  color: var(--charcoal);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -40,20 +41,22 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .modal-close:hover {
-  background: #9FE823;
-  color: #060709;
+  background: var(--lime);
+  color: var(--charcoal);
+  border-color: var(--lime);
 }
 
 .modal-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(159, 232, 35, 0.15);
-  border: 1px solid var(--gold-primary);
-  color: var(--gold-light);
+  background: var(--surface-light);
+  border: 1px solid var(--border-gray);
+  color: var(--charcoal);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 14px;
@@ -63,13 +66,14 @@
 
 .modal-header h2 {
   font-size: 26px;
-  color: #FFFFFF;
+  color: var(--charcoal);
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .modal-header p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-body);
   margin-bottom: 24px;
 }
 
@@ -91,7 +95,7 @@
   display: block;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--charcoal);
   margin-bottom: 6px;
 }
 
@@ -99,30 +103,32 @@
 .form-group select,
 .form-group textarea {
   width: 100%;
-  background: rgba(2, 29, 77, 0.6);
-  border: 1px solid rgba(159, 232, 35, 0.3);
+  background: var(--bg-warm);
+  border: 1px solid var(--border-gray);
   padding: 12px 14px;
   border-radius: 8px;
-  color: #FFFFFF;
+  color: var(--charcoal);
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s ease;
+  font-family: inherit;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 10px rgba(159, 232, 35, 0.3);
+  border-color: var(--charcoal);
+  background: #FFFFFF;
 }
 
 .form-group select option {
-  background: #0D1017;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: var(--charcoal);
 }
 
 .modal-submit-btn {
   width: 100%;
+  margin-top: 8px;
 }
 
 .modal-submit-btn:disabled {
@@ -136,14 +142,14 @@
   justify-content: center;
   gap: 6px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-muted);
   margin-top: 14px;
 }
 
 .form-error {
-  color: #ff8a8a;
-  background: rgba(255, 138, 138, 0.1);
-  border: 1px solid rgba(255, 138, 138, 0.35);
+  color: #c92a2a;
+  background: #ffe3e3;
+  border: 1px solid #ffa8a8;
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 13px;
@@ -157,21 +163,23 @@
 
 .success-icon-wrap {
   margin-bottom: 16px;
+  color: var(--charcoal);
 }
 
 .modal-success h2 {
   font-size: 28px;
   margin-bottom: 12px;
+  color: var(--charcoal);
 }
 
 .modal-success p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-body);
   margin-bottom: 12px;
 }
 
 .sub-note {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: var(--text-muted) !important;
   margin-bottom: 24px !important;
 }
 
