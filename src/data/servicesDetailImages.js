@@ -1,10 +1,9 @@
-// This file is used by Services.jsx (detail page) ONLY.
-// serviceImages.js is used by Home.jsx — do NOT modify that file.
+// This file is used by Services.jsx (detail page)
 import metaAds from '../assets/services/meta-ads.jpg'
 import seo from '../assets/services/seo.jpg'
-import videoEditing from '../assets/services/video-editing.jpg'
-import socialMediaNew from '../assets/services/social-media-managing-new.jpg'
-import socialMediaPostNew from '../assets/services/social-media-post-design-new.jpg'
+import videoEditing from '../assets/services/video-editing-new.jpg'
+import socialMediaNew from '../assets/services/social-media-managing-hd.jpg'
+import socialMediaPostNew from '../assets/services/social-media-post-design-hd.jpg'
 import contentWritingNew from '../assets/services/content-writing-new.jpg'
 
 export const servicesDetailImages = {

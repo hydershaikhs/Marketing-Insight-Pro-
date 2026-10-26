@@ -66,7 +66,7 @@ export default function Contact() {
                   <div className="c-icon-wrap"><Mail size={22} className="gold-icon" /></div>
                   <div>
                     <strong>Email Consultation</strong>
-                    <a href="mailto:contactmarketinginsightpro@gmail.com">contactmarketinginsightpro@gmail.com</a>
+                    <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a>
                   </div>
                 </div>
 

@@ -62,7 +62,7 @@ export default function Footer() {
             <h4>Get In Touch</h4>
             <div className="contact-item">
               <Mail size={16} className="gold-icon flex-shrink-0" />
-              <a href="mailto:contactmarketinginsightpro@gmail.com">contactmarketinginsightpro@gmail.com</a>
+              <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a>
             </div>
             <div className="contact-item">
               <MessageCircle size={16} className="gold-icon flex-shrink-0" />

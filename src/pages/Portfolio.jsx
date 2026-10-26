@@ -113,24 +113,11 @@ export default function Portfolio() {
       <section className="section section-dark portfolio-main">
         <div className="container">
           
-          {/* Filter Tabs */}
-          <div className="filter-tabs-wrapper">
-            <div className="filter-tabs-list">
-              {filters.map((f) => (
-                <button
-                  key={f}
-                  className={`filter-tab-btn ${activeFilter === f ? 'active' : ''}`}
-                  onClick={() => setActiveFilter(f)}
-                >
-                  {f}
-                </button>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Portfolio Grid */}
           <div className="portfolio-grid">
-            {filteredStudies.map((item, index) => (
+            {caseStudies.map((item, index) => (
               <Reveal key={item.slug} delay={index * 60}>
                 <div className={`portfolio-card portfolio-card-${item.slug} glass-card`}>
                   <div className="portfolio-image-wrap">

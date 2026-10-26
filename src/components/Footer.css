@@ -168,11 +168,17 @@
 .contact-col .contact-item a {
   color: rgba(255, 255, 255, 0.85);
   transition: color 0.2s ease;
-  word-break: break-all;
+  white-space: nowrap !important;
 }
 
 .contact-col .contact-item a:hover {
   color: #9FE823;
+}
+
+@media (max-width: 400px) {
+  .contact-col .contact-item a {
+    font-size: 12px !important;
+  }
 }
 
 .flex-shrink-0 {
