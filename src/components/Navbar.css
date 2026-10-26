@@ -1,7 +1,3 @@
-/* ==========================================================================
-   HS CREATIVES — DARK CHARCOAL NAVBAR (#101010) (SPEC SECTION 3)
-   ========================================================================== */
-
 .navbar-header {
   position: fixed;
   top: 0;
@@ -9,24 +5,27 @@
   right: 0;
   z-index: 1000;
   padding: 12px 0;
-  transition: all 0.25s ease;
-  background-color: #101010 !important; /* Solid charcoal black */
-  background-image: none !important;
-  border-bottom: 1px solid #292929 !important; /* Subtle solid dark border */
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: rgba(6, 7, 9, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-header.scrolled {
   padding: 10px 0;
-  background-color: #101010 !important;
-  border-bottom: 1px solid #292929 !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  background-color: rgba(6, 7, 9, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(159, 232, 35, 0.35);
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .navbar-brand {
@@ -36,17 +35,17 @@
 }
 
 .brand-logo {
-  height: 42px;
+  height: 44px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-brand:hover .brand-logo {
   transform: scale(1.03);
 }
 
-/* Desktop Navigation Links */
+/* Desktop Nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -58,18 +57,17 @@
 .nav-link {
   font-family: var(--font-ui);
   font-size: 14.5px;
-  font-weight: 500;
-  color: #FFFFFF; /* Pure White Links */
+  font-weight: 600;
+  color: #CBD5E1;
   position: relative;
-  padding: 6px 0;
-  transition: color 0.2s ease;
+  padding: 4px 0;
+  transition: color 0.25s ease;
 }
 
 .nav-link:hover {
-  color: #B8F36B; /* Brand Lime Green on hover */
+  color: #9FE823;
 }
 
-/* Active Page Indicator: Lime Green underline */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -77,14 +75,14 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #B8F36B;
-  transition: width 0.25s ease;
+  background: #9FE823;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 2px;
 }
 
 .nav-link.active {
-  color: #B8F36B; /* Active page text lime green */
-  font-weight: 600;
+  color: #9FE823;
+  font-weight: 700;
 }
 
 .nav-link.active::after {
@@ -94,35 +92,36 @@
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
-/* Primary CTA Button: Lime Green #B8F36B with Charcoal #101010 text */
+/* Unified CTA button - SOLID LIME (NO GRADIENT) */
 .navbar-cta-btn {
   padding: 10px 20px !important;
   font-size: 13.5px !important;
-  border-radius: 10px !important;
-  height: 40px !important;
+  border-radius: 9999px !important;
+  height: 42px !important;
   letter-spacing: 0.01em;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #B8F36B !important;
+  background: #9FE823 !important;
+  background-color: #9FE823 !important;
   background-image: none !important;
-  color: #101010 !important;
-  transition: all 0.2s ease;
+  color: #060709 !important;
+  box-shadow: 0 4px 16px rgba(159, 232, 35, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border: none !important;
   font-family: var(--font-ui);
-  font-weight: 600 !important;
-  box-shadow: none !important;
+  font-weight: 700;
 }
 
 .navbar-cta-btn:hover {
-  background-color: #A8E65B !important;
+  background-color: #B5F83C !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(184, 243, 107, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(159, 232, 35, 0.5);
 }
 
 .mobile-toggle {
@@ -132,7 +131,7 @@
   color: #FFFFFF;
   cursor: pointer;
   padding: 6px;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: background 0.2s ease;
   flex-shrink: 0;
 }
@@ -141,17 +140,17 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile Drawer - Solid Charcoal #101010 */
+/* Mobile Drawer */
 .mobile-drawer {
   display: none;
   position: fixed;
   top: 60px;
   left: 0;
   right: 0;
-  background-color: #101010;
-  border-bottom: 2px solid #B8F36B;
+  background: #0B0E15;
+  border-bottom: 2px solid #9FE823;
   padding: 20px 24px;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
   flex-direction: column;
   gap: 16px;
   z-index: 999;
@@ -166,10 +165,10 @@
 .mobile-link {
   font-family: var(--font-ui);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   color: #FFFFFF;
   padding: 12px 0;
-  border-bottom: 1px solid #292929;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: block;
   transition: color 0.2s ease;
 }
@@ -179,11 +178,10 @@
 }
 
 .mobile-link.active {
-  color: #B8F36B;
-  font-weight: 600;
+  color: #9FE823;
 }
 
-/* Responsive */
+/* RESPONSIVE NAVBAR FIXES */
 @media (max-width: 960px) {
   .nav-links {
     display: none;
@@ -206,14 +204,14 @@
 
 @media (max-width: 600px) {
   .brand-logo {
-    height: 36px;
+    height: 38px;
   }
 
   .navbar-cta-btn {
     font-size: 12px !important;
-    padding: 7px 14px !important;
+    padding: 7px 12px !important;
     height: 36px !important;
-    gap: 6px !important;
+    gap: 5px !important;
   }
 
   .navbar-cta-btn .cta-arrow {
@@ -223,12 +221,12 @@
 
 @media (max-width: 380px) {
   .brand-logo {
-    height: 30px;
+    height: 32px;
   }
 
   .navbar-cta-btn {
     font-size: 11px !important;
-    padding: 6px 10px !important;
+    padding: 5px 10px !important;
     height: 32px !important;
   }
 }

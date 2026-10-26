@@ -1,62 +1,44 @@
 :root {
-  /* ==========================================================================
-     HS CREATIVES — EXACT BRAND COLOR PALETTE (LIGHT THEME)
-     ========================================================================== */
-  --charcoal: #101010;
-  --lime: #B8F36B;
-  --lime-hover: #A8E65B;
-  --white: #FFFFFF;
-  --bg-warm: #F7F7F4;
-  --surface-light: #F0F1ED;
-  --border-gray: #E2E4DF;
-  --border-subtle: #D5D8D1;
-  --border-dark: #292929;
-  --text-body: #555B61;
-  --text-muted: #777777;
+  /* --- Brand Tokens (Gold #BD892C | Navy #021D4D) --- */
+  --navy-deep: #060709;      /* Exact logo navy blue */
+  --navy-surface: #0D1017;   /* Elevated navy card surface */
+  --navy-card: #121622;      /* Dark navy container */
+  --navy-soft: #181E2C;      /* Interactive hover state */
+  --navy-light: #232B3E;     /* Border glow navy */
 
-  /* Theme mappings */
-  --paper: #F7F7F4;
-  --paper-soft: #F0F1ED;
-  --paper-card: #FFFFFF;
-  --heading: #101010;
-  --ink: #555B61;
-  --slate: #555B61;
-  --slate-light: #777777;
-  --border-light: #E2E4DF;
-  --border-gold: #B8F36B;
+  /* Exact Logo Gold System */
+  --gold-primary: #9FE823;   /* Exact logo golden color */
+  --gold-light: #B5F83C;     /* Brighter logo gold highlight */
+  --gold-mid: #86D411;       /* Mid-depth gold */
+  --gold-deep: #65A30D;      /* Deep shadow gold */
+  --gold-gradient: #9FE823;
+  --gold-text-gradient: #9FE823;
+  --gold-glow: rgba(159, 232, 35, 0.35);
 
-  /* Primary Brand Lime System (SOLID — NO GRADIENT) */
-  --gold-primary: #B8F36B;
-  --gold-light: #B8F36B;
-  --gold-mid: #A8E65B;
-  --gold-deep: #101010;
-  --gold-gradient: #B8F36B;
-  --gold-text-gradient: #101010;
-  --gold-glow: none;
-
-  /* Charcoal Structural Elements */
-  --navy-deep: #101010;
-  --navy-surface: #FFFFFF;
-  --navy-card: #F0F1ED;
-  --navy-soft: #E2E4DF;
-  --navy-light: #D5D8D1;
+  /* Light Canvas Theme */
+  --paper: #060709;
+  --paper-soft: #0C0E14;
+  --paper-card: #111520;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(159, 232, 35, 0.35);
+  --heading: #FFFFFF;
+  --ink: #F1F5F9;
+  --slate: #94A3B8;
+  --slate-light: #64748B;
 
   /* Fonts */
-  --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Outfit', -apple-system, sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
-  --font-ui: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-ui: 'Plus Jakarta Sans', sans-serif;
 
-  /* Layout & Radii */
+  /* Layout & Shadows */
   --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --container: 1280px;
-
-  /* Minimal Clean Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-gold: none;
-  --shadow-navy: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-gold: 0 4px 16px rgba(159, 232, 35, 0.35);
+  --shadow-navy: 0 14px 40px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -68,7 +50,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -83,14 +64,13 @@ html {
 }
 
 body {
-  background-color: var(--bg-warm);
-  color: var(--text-body);
+  background-color: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 100%;
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,18 +78,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--charcoal);
+  color: var(--navy-deep);
 }
 
 p {
   line-height: 1.7;
-  color: var(--text-body);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 button {
@@ -117,27 +96,24 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :focus-visible {
-  outline: 2px solid var(--charcoal);
-  outline-offset: 3px;
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 4px;
 }
 
-/* Custom Scrollbar - Minimal */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-warm);
+  background: #060709;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border-subtle);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: #9FE823;
+  border-radius: 5px;
 }
 
 /* Common Container */
@@ -149,214 +125,167 @@ button {
 
 /* Section Styling */
 .section {
-  padding: 72px 0;
+  padding: 60px 0;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #060709;
 }
 
 .section-dark {
-  background-color: var(--surface-light);
-  color: var(--text-body);
+  background-color: #060709;
+  color: #F1F5F9;
 }
 
 .section-dark h1,
 .section-dark h2,
 .section-dark h3,
 .section-dark h4 {
-  color: var(--charcoal);
-}
-
-.section-dark p {
-  color: var(--text-body);
+  color: #FFFFFF;
 }
 
 .section-surface {
-  background-color: #FFFFFF;
-  color: var(--text-body);
+  background-color: #0B0E15;
+  color: #F1F5F9;
 }
 
 .section-light {
-  background-color: var(--bg-warm);
-  color: var(--text-body);
+  background-color: #0F131D;
+  color: #F1F5F9;
 }
 
 .section-head {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 40px;
+  margin: 0 auto 36px;
 }
 
 .section-head h2 {
-  font-size: clamp(28px, 3.8vw, 42px);
-  margin-bottom: 14px;
-  color: var(--charcoal);
-  letter-spacing: -0.02em;
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 16px;
+  color: #FFFFFF;
 }
 
 .section-head p {
-  font-size: 1.05rem;
-  color: var(--text-body);
-  font-weight: 400;
-  line-height: 1.65;
+  font-size: 1.1rem;
+  color: #94A3B8;
+  font-weight: 500;
 }
 
 .section-dark .section-head p {
-  color: var(--text-body);
+  color: #94A3B8;
 }
 
 /* Eyebrow Tag */
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--charcoal);
-  margin-bottom: 14px;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
 }
 
 .eyebrow::before {
   content: '';
-  width: 18px;
+  width: 24px;
   height: 2px;
-  background-color: var(--lime);
+  background: #9FE823;
 }
 
-/* Solid Text Highlight (NO GRADIENT) */
+/* Exact Logo Gold Text Gradient Utility */
 .gold-gradient-text {
-  color: var(--charcoal) !important;
+  color: #9FE823 !important;
   background: none !important;
-  -webkit-text-fill-color: initial !important;
+  -webkit-text-fill-color: #9FE823 !important;
   background-clip: border-box !important;
-  display: inline;
+  display: inline-block;
 }
 
 .section-dark .gold-gradient-text {
-  color: var(--charcoal) !important;
+  color: #9FE823 !important;
   background: none !important;
-  -webkit-text-fill-color: initial !important;
+  -webkit-text-fill-color: #9FE823 !important;
   background-clip: border-box !important;
 }
 
-/* Signature Divider */
+/* Signature Gold Divider */
 .signature-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 24px auto;
+  margin: 20px auto;
   width: 100%;
-  max-width: 240px;
+  max-width: 260px;
 }
 
 .signature-divider .line {
   flex: 1;
   height: 1px;
-  background-color: var(--border-dark);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .signature-divider .diamond {
-  width: 6px;
-  height: 6px;
-  background-color: var(--lime);
+  width: 7px;
+  height: 7px;
+  background: #9FE823;
   transform: rotate(45deg);
 }
 
-/* ==========================================================================
-   BUTTONS SYSTEM (SPEC SECTION 5)
-   ========================================================================== */
+/* Buttons System - Matching Reference Image Gold Pill Button */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: var(--radius-md); /* 10px */
-  font-weight: 600;
-  font-size: 14.5px;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 9999px; /* Fully rounded pill button as in reference image */
+  font-weight: 700;
+  font-size: 15px;
   letter-spacing: 0.01em;
-  transition: all 0.25s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  height: 46px;
+  overflow: hidden;
+  z-index: 1;
+  height: 50px;
   white-space: nowrap;
-  border: none;
 }
 
-/* Primary Button: Solid Brand Lime #B8F36B + Charcoal text #101010 */
 .btn-gold {
-  background-color: var(--lime) !important;
-  background-image: none !important;
-  color: var(--charcoal) !important;
-  font-weight: 600 !important;
+  background: #9FE823 !important;
+  background-color: #9FE823 !important;
+  color: #060709 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(159, 232, 35, 0.35);
   border: none !important;
-  box-shadow: none !important;
 }
 
 .btn-gold:hover {
-  background-color: var(--lime-hover) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(184, 243, 107, 0.4) !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 32px -4px rgba(212, 175, 55, 0.6);
 }
 
-/* Secondary Button on light surfaces: White background, Charcoal text, solid 1px border #D5D8D1 */
 .btn-outline-gold {
-  background-color: #FFFFFF !important;
-  color: var(--charcoal) !important;
-  border: 1px solid var(--border-subtle) !important;
-  border-radius: var(--radius-md) !important;
-  box-shadow: var(--shadow-sm);
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #9FE823 !important;
+  border-radius: 9999px;
 }
 
 .btn-outline-gold:hover {
-  background-color: var(--surface-light) !important;
-  border-color: var(--charcoal) !important;
-  color: var(--charcoal) !important;
+  background: var(--gold-primary);
+  color: var(--navy-deep);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
 .section-dark .btn-outline-gold {
-  background-color: #FFFFFF !important;
-  color: var(--charcoal) !important;
-  border: 1px solid var(--border-subtle) !important;
-}
-
-.section-dark .btn-outline-gold:hover {
-  background-color: var(--surface-light) !important;
-  border-color: var(--charcoal) !important;
-}
-
-/* Button Active / Pressed */
-.btn:active {
-  transform: scale(0.98) !important;
-}
-
-.btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none !important;
-}
-
-/* Remove gradient shimmer */
-.btn::after {
-  display: none !important;
-}
-.btn:hover::after {
-  display: none !important;
-}
-
-/* ==========================================================================
-   CARDS SYSTEM (SPEC SECTION 7)
-   ========================================================================== */
-.glass-card {
-  background: #FFFFFF !important;
-  border: 1px solid var(--border-gray) !important;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  transition: all 0.3s ease;
-  color: var(--text-body) !important;
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #9FE823 !important;
 }
 
 .glass-card h1,
@@ -365,89 +294,29 @@ button {
 .glass-card h4,
 .glass-card h5,
 .glass-card h6 {
-  color: var(--charcoal) !important;
+  color: #FFFFFF !important;
 }
 
 .glass-card p {
-  color: var(--text-body) !important;
+  color: #94A3B8 !important;
 }
 
 .glass-card:hover {
-  border-color: var(--lime) !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transform: translateY(-4px);
+  border-color: #9FE823 !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(159, 232, 35, 0.2);
+  transform: translateY(-6px);
 }
 
 .section-dark .glass-card {
-  background: #FFFFFF !important;
-  border: 1px solid var(--border-gray) !important;
-  box-shadow: var(--shadow-card);
+  background: #111520 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #F1F5F9 !important;
 }
 
-/* ==========================================================================
-   PAGE HEADER BANNER (LIGHT THEME)
-   ========================================================================== */
-.page-header {
-  background-color: var(--bg-warm);
-  background-image: none !important;
-  padding: 120px 0 60px;
-  text-align: center;
-  position: relative;
-  border-bottom: 1px solid var(--border-gray);
-}
-
-.page-header::before {
-  display: none !important;
-}
-
-.page-header h1 {
-  font-size: clamp(30px, 4.5vw, 48px);
-  color: var(--charcoal);
-  margin-bottom: 14px;
-  letter-spacing: -0.02em;
-}
-
-.page-header p {
-  font-size: 1.1rem;
-  color: var(--text-body);
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.page-header .hero-badge {
-  background-color: #FFFFFF !important;
-  border: 1px solid var(--border-gray) !important;
-  color: var(--charcoal) !important;
-}
-
-/* ==========================================================================
-   ANIMATIONS & REVEAL (NO OVERFLOW)
-   ========================================================================== */
-.reveal {
-  opacity: 0;
-  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.reveal-up {
-  transform: translateY(24px);
-}
-.reveal-down {
-  transform: translateY(-24px);
-}
-.reveal-left {
-  transform: translateX(-24px);
-}
-.reveal-right {
-  transform: translateX(24px);
-}
-
-.reveal.reveal-visible {
-  opacity: 1;
-  transform: translate(0, 0) !important;
-}
-
-/* Loading spin */
+/* ===== LOADING SPIN ANIMATION ===== */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -457,31 +326,208 @@ button {
   animation: spin 1s linear infinite;
 }
 
+/* ===== FORM ERROR MESSAGE ===== */
 .form-error-msg {
   color: #ef4444;
   font-size: 13px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 12px;
   text-align: center;
 }
 
-/* ==========================================================================
-   GLOBAL RESPONSIVENESS & OVERFLOW FIXES
-   ========================================================================== */
-@media (max-width: 768px) {
-  .section {
-    padding: 50px 0;
+/* ===== PREMIUM ANIMATIONS & MICRO-INTERACTIONS ===== */
+
+/* Smooth staggered card entrance */
+.reveal {
+  opacity: 0;
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-down {
+  transform: translateY(-40px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0) !important;
+}
+
+/* Glass card elevated hover with subtle glow */
+.glass-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: #9FE823 !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(159, 232, 35, 0.2);
+  transform: translateY(-6px);
+}
+
+/* Button press effect */
+.btn:active {
+  transform: scale(0.97) !important;
+  transition-duration: 0.1s;
+}
+
+/* Disabled button styling */
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Page header subtle parallax shimmer */
+.page-header::before {
+  display: none !important;
+}
+
+@keyframes headerShimmer {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-3%, 2%) scale(1.05); }
+}
+
+/* Navbar link underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #9FE823;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Gold icon subtle pulse on hover */
+.gold-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.glass-card:hover .gold-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(189, 137, 44, 0.5));
+}
+
+/* Signature divider animation */
+.signature-divider .diamond {
+  width: 7px;
+  height: 7px;
+  background: #9FE823;
+  transform: rotate(45deg);
+}
+
+.signature-divider:hover .diamond {
+  transform: rotate(225deg) scale(1.3);
+}
+
+/* Smooth image zoom in cards */
+.portfolio-card:hover .portfolio-image-wrap img,
+.service-detail-card:hover .service-detail-image-wrap img {
+  transform: scale(1.08);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Text content fade-in utility */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
-  .container {
-    padding: 0 16px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .section {
-    padding: 40px 0;
-  }
+.page-header-inner h1 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.page-header-inner p {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.page-header-inner .hero-badge {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
+}
+
+/* Footer link hover effect */
+.footer-col a {
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-col a:hover {
+  color: var(--gold-light) !important;
+  padding-left: 4px;
+}
+
+/* Stats counter glow */
+.about-stat-row strong {
+  transition: text-shadow 0.3s ease;
+}
+
+.about-stat-row:hover strong {
+  text-shadow: 0 0 16px rgba(189, 137, 44, 0.4);
+}
+
+/* Eyebrow shimmer effect */
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #9FE823;
+}
+
+.eyebrow:hover::before {
+  width: 36px;
+}
+
+/* ===== PREMIUM BUTTON SHIMMER EFFECT ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::after {
+  display: none !important;
+}
+
+.btn:hover::after {
+  display: none !important;
+}
+
+
+
+/* GLOBAL MOBILE OVERFLOW PREVENTION */
+html, body {
+  max-width: 100%;
+  overflow-x: clip !important;
+}
+@media (max-width: 600px) {
   .container {
     padding: 0 16px !important;
+  }
+  .section {
+    padding: 40px 0 !important;
   }
 }
