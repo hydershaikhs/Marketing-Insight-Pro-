@@ -908,36 +908,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .hero {
-  position: relative;
-  padding: 120px 0 70px;
-  background-color: #060709;
-  background-image: none;
-  top: 15%;
-  right: -5%;
-  border-radius: 50%;
-  filter: blur(70px);
-  z-index: 1;
-  pointer-events: none;
-  animation: ambientFloat1 15s infinite alternate ease-in-out;
-}
 
-.hero::after {
-  display: none !important;
-}
-
-@keyframes ambientFloat1 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 40px) scale(1.08); }
-  100% { transform: translate(20px, -20px) scale(0.92); }
-}
-
-@keyframes ambientFloat2 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(45px, -35px) scale(0.96); }
-  100% { transform: translate(-15px, 30px) scale(1.04); }
-}
 
 
 /* ==========================================================================
@@ -1026,6 +997,5 @@
   }
   .hero::before, .hero::after {
   display: none !important;
-}
 }
 }
