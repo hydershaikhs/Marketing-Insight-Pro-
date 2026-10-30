@@ -209,6 +209,7 @@ export default function Home() {
                   <video
                     ref={videoRef}
                     src="/hero-video.mp4"
+                    poster="/hero-dashboard.jpg"
                     autoPlay
                     loop
                     muted
@@ -216,6 +217,13 @@ export default function Home() {
                     preload="auto"
                     className="hero-dashboard-video"
                   />
+                  <div className="hero-video-live-overlay">
+                    <div className="live-metric-pill">
+                      <span className="live-dot pulse-lime"></span>
+                      <span>Live ROAS: <strong>4.8x</strong></span>
+                    </div>
+                    <div className="live-badge-brand">HS Creatives Engine</div>
+                  </div>
                 </div>
               </div>
             </Reveal>
