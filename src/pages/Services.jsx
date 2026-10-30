@@ -19,7 +19,7 @@ export default function Services() {
             <Sparkles size={14} className="gold-icon" /> Core Capabilities
           </div>
           <h1>Services Configured For <span className="gold-gradient-text">Sustainable Growth</span></h1>
-          <p>Six specialized marketing disciplines under one roof — executed with direct focus, transparency, and a commitment to real business outcomes.</p>
+          <p>Three core specialized disciplines under one roof — executed with direct focus, transparency, and a commitment to real business outcomes.</p>
         </div>
       </section>
 

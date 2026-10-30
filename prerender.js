@@ -21,13 +21,13 @@ const routes = [
   {
     path: 'services',
     title: 'Growth Services | HS Creatives — Create • Connect • Convert',
-    desc: 'Performant marketing & creative services: high-ROAS Meta Ads setups, technical SEO audits, high-retention video editing, and custom social post designs.',
+    desc: 'Performant marketing & creative services: high-ROAS Meta Ads setups, UGC video ads, viral video editing, AI video generation, and full social media management.',
     canonical: 'https://marketinginsightpro.vercel.app/services'
   },
   {
     path: 'portfolio',
     title: 'Portfolio & Case Studies | HS Creatives — Digital Agency',
-    desc: 'Explore real-world case studies across Meta Ads, SEO audits, video editing, social media management, and strategic copywriting campaigns.',
+    desc: 'Explore real-world case studies across Meta Ads & UGC, high-retention video editing, AI video generation, and full social media management.',
     canonical: 'https://marketinginsightpro.vercel.app/portfolio'
   },
   {

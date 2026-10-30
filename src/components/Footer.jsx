@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="brand-desc">
-              HS Creatives is an elite creative and performance agency specializing in high-ROAS Meta Ads, Technical SEO, High-Converting Video Editing, Social Media Management, and Direct-Response Copywriting. Create • Connect • Convert.
+              HS Creatives is an elite creative and performance agency specializing in high-ROAS Meta Ads & UGC, High-Converting Video Editing & AI Generation, and Full Social Media Management. Create • Connect • Convert.
             </p>
             <div className="social-links">
               <a href="https://www.facebook.com/MarketingInsightPro" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
@@ -37,12 +37,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Growth Services</h4>
             <ul>
-              <li><Link to="/services">Meta Ads & Performance</Link></li>
-              <li><Link to="/services">High-Rank SEO Optimization</Link></li>
-              <li><Link to="/services">Video Editing & Content</Link></li>
-              <li><Link to="/services">Social Media Post Design</Link></li>
+              <li><Link to="/services">Meta Ads & UGC Campaigns</Link></li>
+              <li><Link to="/services">Video Editing & AI Videos</Link></li>
               <li><Link to="/services">Social Media Management</Link></li>
-              <li><Link to="/services">Direct Response Copywriting</Link></li>
             </ul>
           </div>
 

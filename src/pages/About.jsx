@@ -12,7 +12,7 @@ const teamMembers = [
   },
   {
     name: 'Sara Khan',
-    role: 'SEO Specialist',
+    role: 'UGC & Creative Strategist',
   },
   {
     name: 'Hassan Shaikh',
@@ -20,7 +20,7 @@ const teamMembers = [
   },
   {
     name: 'Ali Shaikh',
-    role: 'Video Editor',
+    role: 'Video Editor & AI Creator',
   },
   {
     name: 'Hafsa Shah',

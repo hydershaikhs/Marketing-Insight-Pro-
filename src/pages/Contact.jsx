@@ -58,7 +58,7 @@ export default function Contact() {
               <span className="eyebrow">Direct Contact</span>
               <h2>Get In Touch With Our <span className="gold-gradient-text">Growth Team</span></h2>
               <p className="contact-lead-desc">
-                Have questions about scaling your Meta Ads, boosting your Google SEO rankings, or redesigning your website? We are ready to audit your funnel.
+                Have questions about scaling your Meta Ads with high-converting creatives & UGC, viral video editing, or end-to-end social media management? We are ready to audit your brand.
               </p>
 
               <div className="contact-cards-list">
@@ -167,11 +167,8 @@ export default function Contact() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       >
                         <option>Meta Ads</option>
-                        <option>SEO</option>
-                        <option>Content Writing</option>
                         <option>Video Editing</option>
-                        <option>Social Media Post Design</option>
-                        <option>Social Media Managing</option>
+                        <option>Social Media Management</option>
                       </select>
                     </div>
                   </div>

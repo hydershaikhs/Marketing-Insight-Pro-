@@ -24,17 +24,13 @@ export default function Portfolio() {
     document.title = "Portfolio | HS Creatives — Create • Connect • Convert";
   }, []);
 
-  const filters = ['All', 'Meta Ads', 'SEO', 'Video Editing', 'Social Media', 'Copywriting'];
+  const filters = ['All', 'Meta Ads', 'Video Editing', 'Social Media Management'];
 
   const filteredStudies = caseStudies.filter(item => {
     if (activeFilter === 'All') return true;
     if (activeFilter === 'Meta Ads') return item.category === 'Meta Ads';
-    if (activeFilter === 'SEO') return item.category === 'SEO';
     if (activeFilter === 'Video Editing') return item.category === 'Video Editing';
-    if (activeFilter === 'Social Media') {
-      return item.category === 'Social Media Post Design' || item.category === 'Social Media Managing';
-    }
-    if (activeFilter === 'Copywriting') return item.category === 'Content Writing';
+    if (activeFilter === 'Social Media Management') return item.category === 'Social Media Management';
     return false;
   });
 
@@ -58,9 +54,9 @@ export default function Portfolio() {
     {
       name: 'Zain Malik',
       company: 'PEPVIAL',
-      role: 'Marketing Lead',
+      role: 'Brand Lead',
       rating: 5,
-      text: 'The SEO audit report they delivered was extremely technical and precise. We implemented their keyword strategy and saw a 150% boost in organic Google clicks.'
+      text: 'Their social media management and creative designs transformed our online presence. Our engagement skyrocketed and our accounts post consistently on time.'
     },
     {
       name: 'Kamran Ahmed',

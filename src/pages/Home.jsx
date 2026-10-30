@@ -76,25 +76,25 @@ const processSteps = [
   {
     step: '01',
     title: 'Audit & Funnel Discovery',
-    text: 'We analyze your ad account, SEO metrics, brand visuals, and target audience to expose hidden growth bottlenecks.',
+    text: 'We analyze your ad account, audience behavior, competitor creatives, and brand presence to expose hidden growth bottlenecks.',
     icon: Target
   },
   {
     step: '02',
-    title: 'Custom High-ROAS Strategy',
-    text: 'We construct a bulletproof growth blueprint targeting high-LTV buyers with custom creative copy and funnel architecture.',
+    title: 'High-Converting Creative & Strategy',
+    text: 'We construct a bulletproof growth blueprint with custom ad creatives, authentic UGC videos, and engaging social assets.',
     icon: TrendingUp
   },
   {
     step: '03',
     title: 'Agile Execution & Scaling',
-    text: 'High-converting Meta Ads, SEO optimization, and luxury creative edits go live — managed by senior growth engineers.',
+    text: 'High-converting Meta Ads, viral video edits, and branded social posts go live — managed by senior growth engineers.',
     icon: Zap
   },
   {
     step: '04',
-    title: 'ROI Optimization & Scaling',
-    text: 'We continuously test ad variations, optimize bid strategies, and scale winning campaigns to double revenue predictability.',
+    title: 'ROI Optimization & Analysis',
+    text: 'We continuously test ad variations, analyze real-time ROAS metrics, and scale winning campaigns to accelerate revenue.',
     icon: Award
   },
 ];
@@ -102,23 +102,23 @@ const processSteps = [
 const faqs = [
   {
     q: 'What does your Meta Ads service include?',
-    a: 'We handle end-to-end Meta Ads campaign setup on Meta Ads Manager — from defining campaign objectives and target audience to creating high-converting ad creatives designed for sales. We also manage and monitor the campaigns using Meta Business Suite.',
-  },
-  {
-    q: 'What is included in your SEO audit service?',
-    a: 'Our SEO service covers comprehensive keyword research, technical on-page SEO analysis, off-page structure review, and backlink research. We deliver a detailed, actionable PDF SEO report that outlines exactly what needs to be improved for better search visibility.',
-  },
-  {
-    q: 'What kind of content do you write?',
-    a: 'We write social media post captions, website blog articles, and advertising copy. We use professional writing assistants and grammar tools like Grammarly and QuillBot to ensure all content is polished, readable, and aligned with your brand voice.',
+    a: 'We handle the complete Meta Ads lifecycle: custom funnel strategy, campaign setup on Meta Ads Manager, high-converting ad creative design, authentic UGC (User-Generated Content) ads, and continuous daily metric analysis to maximize your ROAS.',
   },
   {
     q: 'What video editing services do you offer?',
-    a: 'We edit short-form social media videos including painting reels and review reels. We apply clean cuts, engaging captions/subtitles, smooth transitions, and audio sync using CapCut and Adobe Premiere Pro.',
+    a: 'We edit high-retention short-form and long-form videos for YouTube, Instagram Reels, TikTok, and Facebook. Our edits feature dynamic subtitles, sound design, visual hooks, seamless flow, and modern AI video generation.',
   },
   {
-    q: 'What does your social media management service cover?',
-    a: 'We plan, schedule, and post content consistently on your Facebook and Instagram pages. We manage your page activity through Meta Business Suite and ensure a professional and consistent brand presence across platforms.',
+    q: 'What does your Social Media Management service cover?',
+    a: 'We take complete ownership of your social channels: custom branded post and carousel design, short-form reels planning, direct-response copywriting and captions, consistent scheduling, and in-depth growth analytics.',
+  },
+  {
+    q: 'How do you structure campaigns to maximize ROAS?',
+    a: 'We combine rigorous audience testing, conversion-focused ad creatives, authentic UGC hooks, and daily data analytics within Meta Ads Manager to rapidly identify winners and scale profitably.',
+  },
+  {
+    q: 'How fast do we get started?',
+    a: 'Once we finalize our strategy session, onboarding begins within 24 hours. Your campaign architecture, creative designs, and content calendars are deployed without unnecessary delays.',
   },
 ];
 
@@ -156,7 +156,7 @@ export default function Home() {
               </h1>
 
               <p className="hero-sub">
-                From sales-focused Meta Ads campaigns and technical SEO audits to viral short-form video editing, visual branding, and strategic copywriting — engineered by HS Creatives to help brands Create, Connect, and Convert.
+                From high-converting Meta Ads & UGC setups to viral short-form video editing, AI video generation, and full-suite social media management — engineered by HS Creatives to help brands Create, Connect, and Convert.
               </p>
 
               <div className="hero-actions">
@@ -291,7 +291,7 @@ export default function Home() {
               Core Capabilities
             </span>
             <h2>Specialized Services Designed For <span className="gold-gradient-text animated-gradient">Aggressive Scale</span></h2>
-            <p>Six core growth disciplines executed by senior specialists committed to maximum ROI.</p>
+            <p>Three core growth disciplines executed by senior specialists committed to maximum ROI.</p>
           </div>
 
           <div className="services-grid">
