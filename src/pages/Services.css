@@ -1,6 +1,6 @@
 .services-catalog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   align-items: stretch;
 }
@@ -89,6 +89,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: hidden;
 }
 
 .service-header {
@@ -96,7 +97,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
-  min-height: 52px;
+  height: 54px;
 }
 
 .service-icon-box {
@@ -113,11 +114,12 @@
 }
 
 .service-header h2 {
-  font-size: 20px;
+  font-size: 19px;
   color: #101010;
   font-weight: 700;
   line-height: 1.25;
   margin: 0;
+  word-break: break-word;
 }
 
 .service-short-desc {
@@ -126,19 +128,21 @@
   color: #101010;
   margin-bottom: 12px;
   line-height: 1.5;
-  min-height: 42px;
+  height: 44px;
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .service-full-desc {
   font-size: 13px;
   color: #555B61;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.6;
-  min-height: 84px;
+  height: 84px;
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .deliverables-box {
@@ -147,10 +151,10 @@
   padding: 16px 18px;
   border-radius: 12px;
   margin-bottom: 20px;
-  flex: 1;
+  height: 230px;
   display: flex;
   flex-direction: column;
-  min-height: 220px;
+  overflow: hidden;
 }
 
 .deliverables-box h4 {
@@ -190,7 +194,7 @@
 
 .btn-full-card {
   width: 100%;
-  height: 46px;
+  height: 48px;
   margin-top: auto;
   display: flex;
   align-items: center;
@@ -230,53 +234,25 @@
   min-width: 280px;
 }
 
-.guarantee-text h2 {
-  font-size: 26px;
+.guarantee-text h3 {
+  font-size: 24px;
   color: #101010;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .guarantee-text p {
-  font-size: 15px;
   color: #555B61;
-  margin-bottom: 16px;
+  line-height: 1.7;
 }
 
-.guarantee-perks {
-  display: flex;
-  gap: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #101010;
-  flex-wrap: wrap;
+.guarantee-box .btn {
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
-  .services-catalog-grid {
-    grid-template-columns: 1fr;
-  }
   .guarantee-box {
     padding: 32px 24px;
-    flex-direction: column;
-    text-align: center;
+    gap: 24px;
   }
-  .guarantee-perks {
-    justify-content: center;
-  }
-}
-
-/* Services intro spacing */
-.services-intro {
-  padding-bottom: 32px;
-}
-
-.services-margin-reset {
-  padding-top: 0;
-}
-
-/* Custom Card Image Adjustments */
-.service-detail-card-meta-ads .service-detail-image-wrap img,
-.service-detail-card-seo .service-detail-image-wrap img,
-.service-detail-card-video-editing .service-detail-image-wrap img {
-  object-position: center top !important;
 }

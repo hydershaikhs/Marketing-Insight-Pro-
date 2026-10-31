@@ -62,7 +62,7 @@ export default function Services() {
                       </div>
 
                       <button className="btn btn-gold btn-full-card" onClick={() => setModalOpen(true)}>
-                        <Calendar size={16} /> Book Strategy for {s.title.split('&')[0]} <ArrowRight size={16} />
+                        <Calendar size={16} /> Book Strategy Session <ArrowRight size={16} />
                       </button>
                     </div>
                   </div>

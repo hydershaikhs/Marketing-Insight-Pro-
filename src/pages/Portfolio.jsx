@@ -217,7 +217,7 @@ export default function Portfolio() {
               <h2>{selectedStudy.title} Case Study</h2>
               <div className="modal-subtitle">
                 <span>Niche: <strong>{selectedStudy.niche}</strong></span>
-                <span className="divider">|</span>
+                <span className="divider"> • </span>
                 <span className="gold-text">Outcome: <strong>{selectedStudy.resultMetric}</strong></span>
               </div>
             </div>
