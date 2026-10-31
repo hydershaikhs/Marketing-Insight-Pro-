@@ -30,10 +30,10 @@ export const testimonials = [
     initials: 'HS',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
     rating: 5,
-    result: '#1 Rank on Google',
+    result: '4.8x Meta Ads ROAS',
     verified: true,
     quote:
-      'Our website was invisible on Google before working with HS Creatives. Within 3 months of technical SEO and content strategy, we captured top 3 rankings for high-intent keywords across our industry.',
+      'HS Creatives transformed our Meta Ads and ad creative strategy from the ground up. Their authentic UGC ads and daily campaign scaling reduced our customer acquisition cost and delivered a consistent 4.8x ROAS!',
   },
   {
     name: 'Sana Malik',

@@ -127,8 +127,27 @@
 /* PORTFOLIO GRID */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio-grid > .reveal {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
 }
 
 .portfolio-card {
@@ -226,6 +245,7 @@
   color: #101010 !important;
   margin-bottom: 12px;
   font-weight: 700;
+  min-height: 28px;
 }
 
 .card-result-preview-text {
@@ -233,6 +253,7 @@
   color: #555B61 !important;
   margin-bottom: 20px;
   line-height: 1.6;
+  min-height: 46px;
 }
 
 .card-result-preview-text strong {

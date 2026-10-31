@@ -26,7 +26,7 @@ export default function CookiePolicy() {
       <h2>Contact</h2>
       <p>
         Questions about this policy can be sent to{' '}
-        <a href="mailto:contactmarketinginsightpro@gmail.com">contactmarketinginsightpro@gmail.com</a>.
+        <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a>.
       </p>
     </div>
   )

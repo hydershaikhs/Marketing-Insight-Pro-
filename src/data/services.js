@@ -40,7 +40,7 @@ export const services = [
     short: 'Full social media handling: branded post design, engaging reels, persuasive copywriting, and growth analysis.',
     detail:
       'We take complete ownership of managing and growing your brand across social media channels. We design premium branded posts and carousels, produce high-engagement reels, write persuasive conversion copy and captions, handle scheduling, and drive audience growth through continuous metric analysis and strategy refinement.',
-    targetRoi: 'Organic Growth & Brand Authority',
+    targetRoi: 'Organic Growth & Authority',
     deliverables: [
       'Complete Social Media Account Management',
       'Custom Branded Post & Carousel Design',
