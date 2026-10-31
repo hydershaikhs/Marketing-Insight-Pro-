@@ -66,7 +66,7 @@ export default function Contact() {
                   <div className="c-icon-wrap"><Mail size={22} className="gold-icon" /></div>
                   <div>
                     <strong>Email Consultation</strong>
-                    <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a>
+                    <a href="mailto:supporthscreatives@gmail.com">supporthscreatives@gmail.com</a>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ export default function Contact() {
           <Reveal direction="right">
             <div className="contact-form-card glass-card">
               {!submitted ? (
-                <form action="https://formsubmit.co/infohscreatives@gmail.com" method="POST">
+                <form action="https://formsubmit.co/supporthscreatives@gmail.com" method="POST">
                   {/* FormSubmit Configuration */}
                   <input type="hidden" name="_next" value="https://marketing-insight-pro.vercel.app/contact?submitted=true" />
                   <input type="hidden" name="_captcha" value="false" />

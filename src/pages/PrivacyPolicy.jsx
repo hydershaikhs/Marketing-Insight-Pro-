@@ -32,14 +32,14 @@ export default function PrivacyPolicy() {
       <h2>Your Choices</h2>
       <p>
         You can contact us at{' '}
-        <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a> at any
+        <a href="mailto:supporthscreatives@gmail.com">supporthscreatives@gmail.com</a> at any
         time to ask what information we hold about you or to request that it be deleted.
       </p>
 
       <h2>Contact</h2>
       <p>
         Questions about this policy can be sent to{' '}
-        <a href="mailto:infohscreatives@gmail.com">infohscreatives@gmail.com</a> or via
+        <a href="mailto:supporthscreatives@gmail.com">supporthscreatives@gmail.com</a> or via
         WhatsApp at +92 326 6739989.
       </p>
     </div>

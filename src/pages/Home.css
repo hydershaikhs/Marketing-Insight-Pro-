@@ -612,15 +612,11 @@
   align-items: stretch;
 }
 
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 960px) {
   .services-grid {
     grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto 48px;
   }
 }
 
