@@ -27,12 +27,15 @@ export async function submitLead(data, context) {
 
   const res = await fetch(FORMSUBMIT_AJAX, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
     body: JSON.stringify(payload),
   });
 
   const json = await res.json();
-  if (!json.success) {
+  if (json.success === 'false' || json.success === false) {
     throw new Error(json.message || 'Something went wrong. Please try again later.');
   }
 }
